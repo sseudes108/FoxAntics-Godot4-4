@@ -14,6 +14,7 @@ var player: Player
 var die: bool = false
 
 func _ready():
+	print("Enemy Base")
 	player = get_tree().get_nodes_in_group(GameManager.GROUP_PLAYER)[0]
 
 func _physics_process(delta):

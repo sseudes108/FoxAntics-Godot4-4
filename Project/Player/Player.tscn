@@ -117,7 +117,7 @@ _data = {
 "Run": SubResource("Animation_noc3c")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_yi0bw")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -147,7 +147,7 @@ text = "Grounded:
 State:
 Velocity"
 
-[node name="Sound" type="AudioStreamPlayer2D" parent="." groups=["Player"]]
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="Sound"]
 volume_db = -15.0
