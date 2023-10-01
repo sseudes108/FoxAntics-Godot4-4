@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://mrn06ymamm5u"]
+[gd_scene load_steps=11 format=3 uid="uid://mrn06ymamm5u"]
 
 [ext_resource type="Texture2D" uid="uid://cofkbab2hbk83" path="res://assets/player/player.png" id="1_sv657"]
+[ext_resource type="Script" path="res://Project/Player/Player.gd" id="1_yi0bw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmfnq"]
-size = Vector2(9, 18)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v40a4"]
+radius = 6.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_eeigw"]
 resource_name = "Idle"
@@ -12,7 +14,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +29,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -44,7 +46,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -61,7 +63,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +80,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -95,7 +97,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -115,19 +117,19 @@ _data = {
 "Run": SubResource("Animation_noc3c")
 }
 
-[node name="Player" type="RigidBody2D"]
-contact_monitor = true
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_yi0bw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_sv657")
 hframes = 19
 frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 6)
-shape = SubResource("RectangleShape2D_kmfnq")
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_v40a4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_7veo1")

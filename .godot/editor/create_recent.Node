@@ -1,3 +1,4 @@
+CharacterBody2D
 TileMap
 CollisionShape2D
 AnimationPlayer
