@@ -134,3 +134,20 @@ autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_7veo1")
 }
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -32.0
+offset_right = 264.0
+offset_bottom = 199.0
+scale = Vector2(0.105259, 0.105259)
+theme_override_colors/font_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+theme_override_font_sizes/font_size = 54
+text = "Grounded:
+State:
+Velocity"
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." groups=["Player"]]
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Sound"]
+volume_db = -15.0

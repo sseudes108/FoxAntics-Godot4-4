@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696155203
+::res://::1696176274
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -95,7 +95,7 @@ Farm Frolics.ogg::AudioStreamOggVorbis::3294669648778402176::1438369114::1696154
 Flowing Rocks.ogg::AudioStreamOggVorbis::7595673743677934947::1438369116::1696154808::1::::<><>::
 game_over.ogg::AudioStreamOggVorbis::8570315869236270228::1438880174::1696154808::1::::<><>::
 impact.wav::AudioStreamWAV::6098387799295109217::1459953022::1696154825::1::::<><>::
-jump.wav::AudioStreamWAV::3270170140750797953::1459971970::1696154825::1::::<><>::
+jump.wav::AudioStreamWAV::3270170140750797953::1459971970::1696176826::1::::<><>::
 land.wav::AudioStreamWAV::71160555762736472::1459969906::1696154825::1::::<><>::
 laser.wav::AudioStreamWAV::4319188289701936051::1459957464::1696154825::1::::<><>::
 phaseJump1.ogg::AudioStreamOggVorbis::6756042724985274092::1392540816::1696154808::1::::<><>::
@@ -110,3 +110,17 @@ blue_button00.png::CompressedTexture2D::332071209605615550::1567906410::16961548
 green_button00.png::CompressedTexture2D::3988406449075763063::1567906412::1696154809::1::::<><>::
 level_select_frame_128.png::CompressedTexture2D::5270708444710693305::1665570478::1696154809::1::::<><>::
 yellow_button00.png::CompressedTexture2D::6974682486863816688::1567906416::1696154809::1::::<><>::
+::res://Project/::1696176158
+::res://Project/Locus/::1696176668
+Locus.gd::GDScript::-1::1696165305::0::1::::<>Node2D<>::
+Locus.tscn::PackedScene::6881271952059012989::1696176668::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn
+::res://Project/Player/::1696176668
+Player.gd::GDScript::-1::1696176817::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::878196177073863328::1696176817::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd
+::res://Project/PlayerCam/::1696160752
+PlayerCam.gd::GDScript::-1::1696157424::0::1::::<>Camera2D<>::
+PlayerCam.tscn::PackedScene::6908318363184113437::1696160752::0::1::::<><>::res://Project/PlayerCam/PlayerCam.gd
+::res://Project/Singletons/::1696176579
+SoundManager.gd::GDScript::-1::1696176579::0::1::::<>Node<>::
+::res://Project/TileSet/::1696158824
+TileSet.tres::TileSet::8045207849666276455::1696158824::0::1::::<><>::uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png

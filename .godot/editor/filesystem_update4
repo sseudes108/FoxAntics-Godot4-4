@@ -5,3 +5,8 @@ res://Project/PlayerCam/PlayerCam.gd
 res://Project/Player/Player.tscn
 res://Project/Locus/Locus.gd
 res://Project/Player/Player.gd
+res://Project/Singletons/SoundManager.gd
+res://Project/Singletons/SignalManager.gd
+res://Project/Enemies/Enemy/Enemy.tscn
+res://Project/Enemies/Enemy/Enemy.gd
+res://Project/Singletons/GameManager.gd

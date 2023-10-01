@@ -1,4 +1,8 @@
+AnimatedSprite2D
+VisibleOnScreenNotifier2D
 CharacterBody2D
+AudioStreamPlayer2D
+Label
 TileMap
 CollisionShape2D
 AnimationPlayer

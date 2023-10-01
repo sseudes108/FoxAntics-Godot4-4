@@ -1,9 +1,16 @@
 extends CharacterBody2D
 class_name Player
 
-#nodes
+#sprite
 @onready var sprite = $Sprite
 @onready var anim = $Anim
+
+#sound
+@onready var sound = $Sound
+@onready var jumpSound = $Sound/JumpSound
+
+#debug
+@onready var debugLabel = $DebugLabel
 
 #constants
 const GRAVITY: float = 1080
@@ -26,6 +33,14 @@ func _physics_process(delta):
 	Inputs()
 	move_and_slide()
 	CheckState()
+	UpdateDebugLabel()
+
+func UpdateDebugLabel():
+	debugLabel.text = "Grounded: %s\n%s\n%s/%s" % [
+		is_on_floor(),
+		PLAYER_STATE.keys()[currentState],
+		velocity.x, velocity.y
+		]
 
 func Inputs():
 	velocity.x = 0
@@ -35,9 +50,12 @@ func Inputs():
 	elif Input.is_action_pressed("right") == true:
 		velocity.x = RUN_SPEED
 		sprite.flip_h = false
+	
+	#Jump
 	if Input.is_action_just_pressed("jump") == true and is_on_floor() == true:
+		jumpSound.pitch_scale = randf_range(0.9,1.1)
+		SoundManager.PlaySound(jumpSound, SoundManager.JUMP)
 		velocity.y = JUMP_FORCE
-		
 	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
 
 ##STATE MACHINE##
@@ -59,6 +77,11 @@ func CheckState():
 func ChangeState(newState: PLAYER_STATE):
 	if currentState == newState:
 		pass
+	
+	if currentState == PLAYER_STATE.FALL:
+		if newState == PLAYER_STATE.IDLE or newState == PLAYER_STATE.RUN:
+			sound.pitch_scale = randf_range(0.9,1.1)
+			SoundManager.PlaySound(sound, SoundManager.LAND)
 	
 	currentState = newState
 	

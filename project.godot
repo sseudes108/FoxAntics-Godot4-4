@@ -15,6 +15,12 @@ run/main_scene="res://Project/Locus/Locus.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.png"
 
+[autoload]
+
+SignalManager="*res://Project/Singletons/SignalManager.gd"
+SoundManager="*res://Project/Singletons/SoundManager.gd"
+GameManager="*res://Project/Singletons/GameManager.gd"
+
 [display]
 
 window/size/viewport_width=1024

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hypohovtbc5j"]
+
+[ext_resource type="Script" path="res://Project/Enemies/Enemy/Enemy.gd" id="1_lcyp7"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_lcyp7")
+
+[node name="VisibleOnScreenNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier" to="." method="ScreenEntered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier" to="." method="ScreenExited"]
