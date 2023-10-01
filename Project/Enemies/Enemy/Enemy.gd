@@ -7,7 +7,7 @@ enum FACING { LEFT = -1, RIGHT = 1 }
 @export var defaultFacing: FACING = FACING.LEFT
 @export var points: int = 1
 
-var speed: float = 33
+@export var speed: float = 33
 var gravity: float = 800
 var facing: FACING = defaultFacing
 var player: Player
@@ -34,7 +34,7 @@ func Die():
 	queue_free()
 
 func ScreenEntered():
-	pass # Replace with function body.
+	pass
 
 func ScreenExited():
-	pass # Replace with function body.
+	pass

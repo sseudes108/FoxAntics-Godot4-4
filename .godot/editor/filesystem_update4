@@ -10,3 +10,8 @@ res://Project/Singletons/SignalManager.gd
 res://Project/Enemies/Enemy/Enemy.tscn
 res://Project/Enemies/Enemy/Enemy.gd
 res://Project/Singletons/GameManager.gd
+res://Project/Enemies/Enemy/Teste.gd
+res://Project/Enemies/Enemy/Snail/Snail.tscn
+res://Project/Enemies/Enemy/Snail/Snail.gd
+res://Project/Enemies/Enemy/Frog/Frog.tscn
+res://Project/Enemies/Enemy/Frog/Frog.gd
