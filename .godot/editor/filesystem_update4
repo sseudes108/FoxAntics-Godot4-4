@@ -1,0 +1,6 @@
+res://Project/TileSet/TileSet.tres
+res://Project/Locus/Locus.tscn
+res://Project/PlayerCam/PlayerCam.tscn
+res://Project/PlayerCam/PlayerCam.gd
+res://Project/Player/Player.tscn
+res://Project/Locus/Locus.gd
