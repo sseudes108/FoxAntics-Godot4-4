@@ -1,10 +1,118 @@
-[gd_scene load_steps=12 format=3 uid="uid://mrn06ymamm5u"]
+[gd_scene load_steps=11 format=3 uid="uid://mrn06ymamm5u"]
 
 [ext_resource type="Texture2D" uid="uid://cofkbab2hbk83" path="res://assets/player/player.png" id="1_sv657"]
-[ext_resource type="Script" path="res://Project/Player/Player.gd" id="1_yi0bw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7i4s"]
-size = Vector2(12, 20)
+[sub_resource type="GDScript" id="GDScript_8vuei"]
+script/source = "extends CharacterBody2D
+class_name Player
+
+#sprite
+@onready var sprite = $Sprite
+@onready var anim = $Anim
+
+#sound
+@onready var sound = $Sound
+@onready var jumpSound = $Sound/JumpSound
+
+#debug
+@onready var debugLabel = $DebugLabel
+
+#constants
+const GRAVITY: float = 1080
+const RUN_SPEED: float = 216
+const MAX_FALL: float = 660
+const HURT_TIME: float = 0.3
+const JUMP_FORCE: float = -270
+
+#State Machine
+enum PLAYER_STATE {IDLE,RUN,JUMP,FALL,HURT}
+var currentState = PLAYER_STATE.IDLE
+
+func _ready():
+	pass
+
+func _physics_process(delta):
+	if is_on_floor() == false:
+		velocity.y += GRAVITY * delta
+	
+	Inputs()
+	move_and_slide()
+	CheckState()
+	UpdateDebugLabel()
+
+func UpdateDebugLabel():
+	debugLabel.text = \"Grounded: %s\\n%s\\n%s/%s\" % [
+		is_on_floor(),
+		PLAYER_STATE.keys()[currentState],
+		velocity.x, velocity.y
+		]
+
+func Inputs():
+	velocity.x = 0
+	if Input.is_action_pressed(\"left\") == true:
+		velocity.x = -RUN_SPEED
+		sprite.flip_h = true
+	elif Input.is_action_pressed(\"right\") == true:
+		velocity.x = RUN_SPEED
+		sprite.flip_h = false
+	
+	#Jump
+	if Input.is_action_just_pressed(\"jump\") == true and is_on_floor() == true:
+		jumpSound.pitch_scale = randf_range(0.9,1.1)
+		SoundManager.PlaySound(jumpSound, SoundManager.JUMP)
+		velocity.y = JUMP_FORCE
+	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
+
+##STATE MACHINE##
+func CheckState():
+	if currentState == PLAYER_STATE.HURT:
+		return
+	
+	if is_on_floor() == true:
+		if velocity.x == 0:
+			ChangeState(PLAYER_STATE.IDLE)
+		else:
+			ChangeState(PLAYER_STATE.RUN)
+	else:
+		if velocity.y > 0:
+			ChangeState(PLAYER_STATE.FALL)
+		else:
+			ChangeState(PLAYER_STATE.JUMP)
+
+func ChangeState(newState: PLAYER_STATE):
+	if currentState == newState:
+		pass
+	
+	if currentState == PLAYER_STATE.FALL:
+		if newState == PLAYER_STATE.IDLE or newState == PLAYER_STATE.RUN:
+			sound.pitch_scale = randf_range(0.9,1.1)
+			SoundManager.PlaySound(sound, SoundManager.LAND)
+	
+	currentState = newState
+	
+	match currentState:
+		PLAYER_STATE.IDLE:
+			anim.play(\"Idle\")
+		PLAYER_STATE.RUN:
+			anim.play(\"Run\")
+		PLAYER_STATE.JUMP:
+			anim.play(\"Jump\")
+		PLAYER_STATE.FALL:
+			anim.play(\"Fall\")
+
+
+
+
+
+
+
+
+
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v40a4"]
+radius = 6.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_eeigw"]
 resource_name = "Idle"
@@ -116,15 +224,8 @@ _data = {
 "Run": SubResource("Animation_noc3c")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23pjs"]
-radius = 6.0
-height = 20.0
-
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-light_mask = 0
-platform_floor_layers = 4278190080
-platform_wall_layers = 1
-script = ExtResource("1_yi0bw")
+script = SubResource("GDScript_8vuei")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_sv657")
@@ -132,8 +233,8 @@ hframes = 19
 frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
-shape = SubResource("RectangleShape2D_y7i4s")
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_v40a4")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
@@ -156,14 +257,4 @@ Velocity"
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="Sound"]
-volume_db = -20.0
-
-[node name="HitBox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 6)
-shape = SubResource("CapsuleShape2D_23pjs")
-
-[connection signal="area_entered" from="HitBox" to="." method="HitBoxEntered"]
+volume_db = -15.0

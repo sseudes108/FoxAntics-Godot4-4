@@ -28,15 +28,3 @@ func ChangeDirection():
 		facing = FACING.RIGHT
 	else:
 		facing = FACING.LEFT
-
-
-
-
-
-
-
-
-
-
-
-

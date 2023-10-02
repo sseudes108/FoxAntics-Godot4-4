@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://k0ofpqeuhsqr"]
+[gd_scene load_steps=14 format=3 uid="uid://k0ofpqeuhsqr"]
 
 [ext_resource type="PackedScene" uid="uid://hypohovtbc5j" path="res://Project/Enemies/Enemy/Enemy.tscn" id="1_26m5c"]
 [ext_resource type="Texture2D" uid="uid://mfh6l04najki" path="res://assets/enemies/frog/frog_sheet.png" id="2_bhldb"]
@@ -67,21 +67,29 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gt0c2"]
-size = Vector2(17, 12)
+size = Vector2(13, 10)
 
-[node name="Enemy" instance=ExtResource("1_26m5c")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vomy"]
+size = Vector2(17, 13)
+
+[node name="Frog" instance=ExtResource("1_26m5c")]
+collision_layer = 0
 script = ExtResource("2_xxe3v")
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_ujgrj")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-position = Vector2(-0.5, 2)
+position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_gt0c2")
 
 [node name="JumpTimer" type="Timer" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_5vomy")
 
 [connection signal="timeout" from="JumpTimer" to="." method="JumpTimeout"]

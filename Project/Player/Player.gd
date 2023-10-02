@@ -96,10 +96,5 @@ func ChangeState(newState: PLAYER_STATE):
 			anim.play("Fall")
 
 
-
-
-
-
-
-
-
+func HitBoxEntered(area):
+	print("Enemy Hit " , area)

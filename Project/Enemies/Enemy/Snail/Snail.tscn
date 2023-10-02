@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://boqsjv544tod2"]
+[gd_scene load_steps=17 format=3 uid="uid://boqsjv544tod2"]
 
 [ext_resource type="PackedScene" uid="uid://hypohovtbc5j" path="res://Project/Enemies/Enemy/Enemy.tscn" id="1_ulpam"]
 [ext_resource type="Script" path="res://Project/Enemies/Enemy/Snail/Snail.gd" id="2_r7xji"]
@@ -83,9 +83,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0ee8"]
+size = Vector2(17, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xomg4"]
 size = Vector2(22, 15)
 
-[node name="Enemy" instance=ExtResource("1_ulpam")]
+[node name="Snail" instance=ExtResource("1_ulpam")]
+collision_layer = 0
 script = ExtResource("2_r7xji")
 speed = 27.0
 
@@ -95,9 +99,13 @@ sprite_frames = SubResource("SpriteFrames_2k3pi")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-position = Vector2(1, 1.5)
+position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_b0ee8")
 
 [node name="FloorDetection" type="RayCast2D" parent="." index="3"]
 position = Vector2(-12, 0)
 target_position = Vector2(0, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_xomg4")

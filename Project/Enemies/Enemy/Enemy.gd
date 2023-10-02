@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Enemy
 
-var OFFSCREEN: float = 1000
+var OFFSCREEN: float = 720
 enum FACING { LEFT = -1, RIGHT = 1 }
 
 @export var defaultFacing: FACING = FACING.LEFT
@@ -14,7 +14,6 @@ var player: Player
 var die: bool = false
 
 func _ready():
-	print("Enemy Base")
 	player = get_tree().get_nodes_in_group(GameManager.GROUP_PLAYER)[0]
 
 func _physics_process(delta):

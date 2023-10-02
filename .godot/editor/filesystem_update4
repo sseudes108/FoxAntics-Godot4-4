@@ -15,3 +15,6 @@ res://Project/Enemies/Enemy/Snail/Snail.tscn
 res://Project/Enemies/Enemy/Snail/Snail.gd
 res://Project/Enemies/Enemy/Frog/Frog.tscn
 res://Project/Enemies/Enemy/Frog/Frog.gd
+res://Project/Enemies/Enemy/Eagle/Eagle.tscn
+res://Project/Enemies/Enemy/Eagle/Eagle.gd
+res://Project/Player/PlayerStateMachine.gd
