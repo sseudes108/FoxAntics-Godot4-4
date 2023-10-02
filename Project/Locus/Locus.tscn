@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5blsqq7q7my4"]
+[gd_scene load_steps=8 format=3 uid="uid://c5blsqq7q7my4"]
 
 [ext_resource type="Script" path="res://Project/Locus/Locus.gd" id="1_kna1n"]
 [ext_resource type="Texture2D" uid="uid://cec5lmbw2fi6u" path="res://assets/tiles/Terrain (16x16).png" id="1_oh0we"]
 [ext_resource type="PackedScene" uid="uid://c5oo82hbjyrub" path="res://Project/PlayerCam/PlayerCam.tscn" id="2_6xtfw"]
 [ext_resource type="PackedScene" uid="uid://mrn06ymamm5u" path="res://Project/Player/Player.tscn" id="3_m7cw1"]
+[ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="5_wtl0y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_675wh"]
 texture = ExtResource("1_oh0we")
@@ -557,3 +558,6 @@ zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_m7cw1")]
 position = Vector2(99, -33)
+
+[node name="Eagle" parent="." instance=ExtResource("5_wtl0y")]
+position = Vector2(443, -251)

@@ -1,14 +1,11 @@
+res://Project/Shooter
 res://Project/Singletons
 res://Project/Bullet/EnemyBullet
 res://Project/Bullet
 res://Project/Bullet/PlayerBullet
 res://assets/enemies/eagle
-res://Project/Enemies/Enemy/Eagle
-res://Project/Enemies/Enemy
 res://assets/enemies/frog
-res://Project/Enemies/Enemy/Frog
 res://assets/enemies/snail
-res://Project/Enemies/Enemy/Snail
 res://Project/Player
 res://Project/PlayerCam
 res://Project/Locus

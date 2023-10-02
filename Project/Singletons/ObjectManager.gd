@@ -13,6 +13,7 @@ func AddDefered(child):
 func AddChild(child):
 	call_deferred("AddDefered", child)
 
+	###### Shooter, Direction, Speed, Firepoint
 func Shot(shooter:SHOOTER, dir: Vector2, speed: float, startPos: Vector2):
 	var newBullet = BULLETS[shooter].instantiate()
 	newBullet.SetUp(dir, speed)

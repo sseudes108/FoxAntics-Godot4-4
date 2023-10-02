@@ -4,6 +4,7 @@ class_name Player
 #sprite
 @onready var sprite = $Sprite
 @onready var anim = $Anim
+@onready var shooter = $Shooter
 
 #sound
 @onready var sound = $Sound
@@ -60,9 +61,13 @@ func Inputs():
 	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
 	
 	#Shot
-	###### Shooter, Direction, Speed, Firepoint
 	if Input.is_action_just_pressed("shoot") == true:
-		ObjectManager.Shot(ObjectManager.SHOOTER.PLAYER, Vector2.RIGHT, 420, global_position)
+		var dir: Vector2
+		if sprite.flip_h == true:
+			dir = Vector2.LEFT
+		else:
+			dir = Vector2.RIGHT
+		shooter.Shot(dir)
 
 ##STATE MACHINE##
 func CheckState():
