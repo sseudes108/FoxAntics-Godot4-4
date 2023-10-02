@@ -43,6 +43,7 @@ func UpdateDebugLabel():
 		]
 
 func Inputs():
+	#Move
 	velocity.x = 0
 	if Input.is_action_pressed("left") == true:
 		velocity.x = -RUN_SPEED
@@ -57,6 +58,11 @@ func Inputs():
 		SoundManager.PlaySound(jumpSound, SoundManager.JUMP)
 		velocity.y = JUMP_FORCE
 	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
+	
+	#Shot
+	###### Shooter, Direction, Speed, Firepoint
+	if Input.is_action_just_pressed("shoot") == true:
+		ObjectManager.Shot(ObjectManager.SHOOTER.PLAYER, Vector2.RIGHT, 420, global_position)
 
 ##STATE MACHINE##
 func CheckState():
@@ -95,6 +101,6 @@ func ChangeState(newState: PLAYER_STATE):
 		PLAYER_STATE.FALL:
 			anim.play("Fall")
 
-
+#Collisions
 func HitBoxEntered(area):
 	print("Enemy Hit " , area)

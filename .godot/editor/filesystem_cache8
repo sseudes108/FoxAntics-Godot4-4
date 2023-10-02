@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696176274
+::res://::1696239133
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -87,7 +87,7 @@ pixel heart 2.png::CompressedTexture2D::3888928004101739459::1663062964::1696154
 ::res://assets/player/::1696154809
 player-single.png::CompressedTexture2D::2476525467640066506::1668423488::1696154809::1::::<><>::
 player.png::CompressedTexture2D::5766416025591491134::1665670852::1696154809::1::::<><>::
-::res://assets/sound/::1696154825
+::res://assets/sound/::1696176826
 boss_arrive.wav::AudioStreamWAV::8547635420845063580::1459463224::1696154825::1::::<><>::
 checkpoint.wav::AudioStreamWAV::3626861099040413754::1459884344::1696154825::1::::<><>::
 damage.wav::AudioStreamWAV::3973340517858659854::1459952984::1696154825::1::::<><>::
@@ -110,17 +110,32 @@ blue_button00.png::CompressedTexture2D::332071209605615550::1567906410::16961548
 green_button00.png::CompressedTexture2D::3988406449075763063::1567906412::1696154809::1::::<><>::
 level_select_frame_128.png::CompressedTexture2D::5270708444710693305::1665570478::1696154809::1::::<><>::
 yellow_button00.png::CompressedTexture2D::6974682486863816688::1567906416::1696154809::1::::<><>::
-::res://Project/::1696176158
-::res://Project/Locus/::1696176668
+::res://Project/::1696178110
+::res://Project/Enemies/::1696178117
+::res://Project/Enemies/Enemy/::1696205957
+Enemy.gd::GDScript::-1::1696204084::0::1::::Enemy<>CharacterBody2D<>::
+Enemy.tscn::PackedScene::541803117840116581::1696205957::0::1::::<><>::res://Project/Enemies/Enemy/Enemy.gd
+::res://Project/Enemies/Enemy/Eagle/::1696205958
+Eagle.gd::GDScript::-1::1696203730::0::1::::<>Enemy<>::
+Eagle.tscn::PackedScene::4883628409504017387::1696205957::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/Enemy/Enemy.tscn<>res://Project/Enemies/Enemy/Eagle/Eagle.gd<>uid://bw7qidfr730y2::::res://assets/enemies/eagle/eagle-attack.png
+::res://Project/Enemies/Enemy/Frog/::1696205958
+Frog.gd::GDScript::-1::1696198056::0::1::::<>Enemy<>::
+Frog.tscn::PackedScene::754357659875960945::1696205958::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/Enemy/Enemy.tscn<>uid://mfh6l04najki::::res://assets/enemies/frog/frog_sheet.png<>res://Project/Enemies/Enemy/Frog/Frog.gd
+::res://Project/Enemies/Enemy/Snail/::1696205959
+Snail.gd::GDScript::-1::1696198197::0::1::::<>Enemy<>::
+Snail.tscn::PackedScene::3403204667397080897::1696205958::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/Enemy/Enemy.tscn<>res://Project/Enemies/Enemy/Snail/Snail.gd<>uid://be7d24fbro8vx::::res://assets/enemies/snail/snail.png
+::res://Project/Locus/::1696206003
 Locus.gd::GDScript::-1::1696165305::0::1::::<>Node2D<>::
-Locus.tscn::PackedScene::6881271952059012989::1696176668::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn
-::res://Project/Player/::1696176668
-Player.gd::GDScript::-1::1696176817::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::878196177073863328::1696176817::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd
+Locus.tscn::PackedScene::6881271952059012989::1696206003::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://boqsjv544tod2::::res://Project/Enemies/Enemy/Snail/Snail.tscn<>uid://k0ofpqeuhsqr::::res://Project/Enemies/Enemy/Frog/Frog.tscn
+::res://Project/Player/::1696205957
+Player.gd::GDScript::-1::1696205774::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::878196177073863328::1696205957::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd
 ::res://Project/PlayerCam/::1696160752
 PlayerCam.gd::GDScript::-1::1696157424::0::1::::<>Camera2D<>::
 PlayerCam.tscn::PackedScene::6908318363184113437::1696160752::0::1::::<><>::res://Project/PlayerCam/PlayerCam.gd
-::res://Project/Singletons/::1696176579
+::res://Project/Singletons/::1696202719
+GameManager.gd::GDScript::-1::1696202719::0::1::::<>Node<>::
+SignalManager.gd::GDScript::-1::1696177706::0::1::::<>Node<>::
 SoundManager.gd::GDScript::-1::1696176579::0::1::::<>Node<>::
 ::res://Project/TileSet/::1696158824
 TileSet.tres::TileSet::8045207849666276455::1696158824::0::1::::<><>::uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png
