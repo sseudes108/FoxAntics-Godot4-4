@@ -29,6 +29,8 @@ func Die():
 	
 	die = true
 	SignalManager.EnemyHit.emit(points, global_position)
+	ObjectManager.EnemyExplosion(global_position)
+	ObjectManager.PickUp(global_position)
 	set_physics_process(false)
 	hide()
 	queue_free()
@@ -40,4 +42,4 @@ func ScreenExited():
 	pass
 
 func HitBoxEntered(area):
-	print("Enemy Hit ", area)
+	Die()

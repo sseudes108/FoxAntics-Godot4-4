@@ -76,4 +76,7 @@ lifeTime = 20.0
 delay = 1.2
 shooter = 1
 
+[node name="FirePoint" type="Marker2D" parent="." index="7"]
+position = Vector2(0, 15)
+
 [connection signal="timeout" from="DirectionTimer" to="." method="OnTimerOut"]

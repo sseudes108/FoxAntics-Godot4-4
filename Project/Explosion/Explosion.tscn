@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://svhyvrvt5nt"]
+
+[ext_resource type="Texture2D" uid="uid://dek416ijgeiuw" path="res://assets/explosion/enemy-deadth.png" id="1_wkuk3"]
+[ext_resource type="Script" path="res://Project/Explosion/Explosion.gd" id="2_7c1j7"]
+[ext_resource type="AudioStream" uid="uid://1e687lmevs73" path="res://assets/sound/Enemy Explode.wav" id="3_k7rxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xqyd"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(0, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n66a"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(40, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1w40"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(80, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14n11"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(120, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5vae"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(160, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ditwp"]
+atlas = ExtResource("1_wkuk3")
+region = Rect2(200, 0, 40, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6th4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xqyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n66a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1w40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14n11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5vae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ditwp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+position = Vector2(309, 163)
+sprite_frames = SubResource("SpriteFrames_m6th4")
+autoplay = "default"
+frame = 2
+frame_progress = 0.850658
+script = ExtResource("2_7c1j7")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k7rxr")
+autoplay = true
+
+[connection signal="animation_finished" from="." to="." method="AnimationFinished"]
+[connection signal="finished" from="Sound" to="." method="SoundFinished"]

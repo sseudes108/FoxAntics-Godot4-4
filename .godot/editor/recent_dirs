@@ -1,3 +1,6 @@
+res://assets/items
+res://Project/PickUp
+res://assets/explosion
 res://Project/Shooter
 res://Project/Singletons
 res://Project/Bullet/EnemyBullet

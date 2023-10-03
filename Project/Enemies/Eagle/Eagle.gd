@@ -4,6 +4,7 @@ extends Enemy
 @onready var rayCast = $RayCast
 @onready var directionTimer = $DirectionTimer
 @onready var shooter = $Shooter
+@onready var firePoint = $FirePoint
 
 const FLY_SPEED: Vector2 = Vector2(35,15)
 var flyDir: Vector2 = Vector2(Vector2.ZERO)
@@ -15,7 +16,7 @@ func _physics_process(delta):
 	#shot
 	if rayCast.is_colliding() == true:
 		var dir = global_position.direction_to(player.global_position)
-		shooter.Shot(dir)
+		shooter.Shot(dir, firePoint.global_position)
 	
 	move_and_slide()
 
@@ -31,9 +32,6 @@ func ChangeDirection():
 func ChasePlayer():
 	ChangeDirection()
 	directionTimer.start()
-
-func Shot():
-	pass
 
 func ScreenEntered():
 	sprite.play("Fly")
