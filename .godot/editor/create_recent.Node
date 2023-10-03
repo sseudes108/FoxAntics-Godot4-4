@@ -1,4 +1,5 @@
 Timer
+AnimationPlayer
 CollisionShape2D
 AudioStreamPlayer2D
 AnimatedSprite2D
@@ -11,6 +12,5 @@ VisibleOnScreenNotifier2D
 CharacterBody2D
 Label
 TileMap
-AnimationPlayer
 RigidBody2D
 Camera2D

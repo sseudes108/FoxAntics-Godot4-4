@@ -7,15 +7,21 @@ const FRUITS = [
 	"Watermelon"
 ]
 
+const POINTS: int = 2
+
 @onready var sprite = $AnimatedSprite2D
 @onready var timer = $Timer
 
 func _ready():
-	var fruit = FRUITS.pick_random()
-	sprite.play(fruit)
+	sprite.play(FRUITS.pick_random())
 
 func _process(delta):
 	pass
 
-func OnTimeout():
+func Destroy():
 	queue_free() 
+
+func Pick(area):
+	print("PickUp Collected")
+	SignalManager.pickedUp.emit(POINTS)
+	Destroy()

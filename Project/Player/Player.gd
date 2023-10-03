@@ -4,12 +4,17 @@ class_name Player
 #sprite
 @onready var sprite = $Sprite
 @onready var anim = $Anim
-@onready var shooter = $Shooter
 
+#invencible
+@onready var invencibleAnim = $InvencibleAnim
+@onready var invencibleTimer = $InvencibleTimer
+
+#shot
+@onready var shooter = $Shooter
 @onready var pointR = $FirePointR
 @onready var pointL = $FirePointL
 
-
+@onready var hurtTimer = $HurtTimer
 
 #sound
 @onready var sound = $Sound
@@ -22,10 +27,11 @@ class_name Player
 const GRAVITY: float = 1080
 const RUN_SPEED: float = 216
 const MAX_FALL: float = 660
-const HURT_TIME: float = 0.3
 const JUMP_FORCE: float = -270
+const HURT_JUMP_FORCE: float = -172
 
 var canDoubleJump: bool = false
+var invencible: bool = false
 
 #State Machine
 enum PLAYER_STATE {IDLE,RUN,JUMP,FALL,HURT}
@@ -51,8 +57,13 @@ func UpdateDebugLabel():
 		]
 
 func Inputs():
-	#Move
 	velocity.x = 0
+	
+	#no Input
+	if currentState == PLAYER_STATE.HURT:
+		return
+	
+	#Move
 	if Input.is_action_pressed("left") == true:
 		velocity.x = -RUN_SPEED
 		sprite.flip_h = true
@@ -90,7 +101,7 @@ func Jump():
 	jumpSound.pitch_scale = randf_range(0.9,1.1)
 	SoundManager.PlaySound(jumpSound, SoundManager.JUMP)
 	velocity.y = JUMP_FORCE
-	
+
 ##STATE MACHINE##
 func CheckState():
 	if currentState == PLAYER_STATE.HURT:
@@ -127,7 +138,46 @@ func ChangeState(newState: PLAYER_STATE):
 			anim.play("Jump")
 		PLAYER_STATE.FALL:
 			anim.play("Fall")
+		PLAYER_STATE.HURT:
+			anim.play("Hurt")
 
 #Collisions
 func HitBoxEntered(area):
 	print("Player Hit " , area)
+	TakeHit()
+
+func TakeHit():
+	if invencible == true:
+		return
+	else:
+		InvencibleStart()
+		Hurt()
+		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
+
+func Hurt():
+	ChangeState(PLAYER_STATE.HURT)
+	anim.play("Hurt")
+	velocity.y = HURT_JUMP_FORCE
+	hurtTimer.start()
+
+func HurtTimeOver():
+	ChangeState(PLAYER_STATE.IDLE)
+
+func InvencibleStart():
+	invencible = true
+	invencibleTimer.start()
+	invencibleAnim.play("Invencible")
+
+func InvencibleEnd():
+	invencible = false
+	invencibleAnim.stop()
+
+
+
+
+
+
+	
+	
+	
+	

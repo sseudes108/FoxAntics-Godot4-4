@@ -16,7 +16,7 @@ const WIN = "win"
 
 var SOUNDS = {
 	CHECKPOINT: preload("res://assets/sound/checkpoint.wav"),
-	DAMAGE: preload("res://assets/sound/damage.wav"),
+	DAMAGE: preload("res://assets/sound/Player Hurt.wav"),
 	KILL: preload("res://assets/sound/pickup5.ogg"),
 	GAMEOVER: preload("res://assets/sound/game_over.ogg"),
 	IMPACT: preload("res://assets/sound/impact.wav"),

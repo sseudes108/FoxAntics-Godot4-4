@@ -50,6 +50,3 @@ func PickUp(position: Vector2):
 	
 	
 	
-	
-	
-	

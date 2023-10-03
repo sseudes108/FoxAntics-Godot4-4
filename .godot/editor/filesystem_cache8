@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696326924
+::res://::1696367598
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -87,7 +87,7 @@ pixel heart 2.png::CompressedTexture2D::3888928004101739459::1663062964::1696154
 ::res://assets/player/::1696154809
 player-single.png::CompressedTexture2D::2476525467640066506::1668423488::1696154809::1::::<><>::
 player.png::CompressedTexture2D::5766416025591491134::1665670852::1696154809::1::::<><>::
-::res://assets/sound/::1696325885
+::res://assets/sound/::1696370075
 boss_arrive.wav::AudioStreamWAV::8547635420845063580::1459463224::1696154825::1::::<><>::
 checkpoint.wav::AudioStreamWAV::3626861099040413754::1459884344::1696154825::1::::<><>::
 damage.wav::AudioStreamWAV::3973340517858659854::1459952984::1696154825::1::::<><>::
@@ -103,6 +103,7 @@ phaseJump1.ogg::AudioStreamOggVorbis::6756042724985274092::1392540816::169615480
 pickup3.ogg::AudioStreamOggVorbis::2679937692288046400::1408468280::1696154808::1::::<><>::
 pickup5.ogg::AudioStreamOggVorbis::5279353509744842107::1408468280::1696154808::1::::<><>::
 pickup.wav::AudioStreamWAV::1626603380912363809::1459953214::1696154825::1::::<><>::
+Player Hurt.wav::AudioStreamWAV::7194624474526886481::1459945822::1696370080::1::::<><>::
 you_win.ogg::AudioStreamOggVorbis::7902787748759025494::1438880178::1696154808::1::::<><>::
 ::res://assets/tiles/::1696154809
 Terrain (16x16).png::CompressedTexture2D::5059567283823272362::1569840892::1696154809::1::::<><>::
@@ -111,50 +112,51 @@ blue_button00.png::CompressedTexture2D::332071209605615550::1567906410::16961548
 green_button00.png::CompressedTexture2D::3988406449075763063::1567906412::1696154809::1::::<><>::
 level_select_frame_128.png::CompressedTexture2D::5270708444710693305::1665570478::1696154809::1::::<><>::
 yellow_button00.png::CompressedTexture2D::6974682486863816688::1567906416::1696154809::1::::<><>::
-::res://Project/::1696325830
-::res://Project/Bullet/::1696243699
-Bullet.gd::GDScript::-1::1696242691::0::1::::Bullet<>Area2D<>::
-Bullet.tscn::PackedScene::8862788469247492305::1696243699::0::1::::<><>::uid://bdypnr384aruu
-::res://Project/Bullet/EnemyBullet/::1696290876
-EnemyBullet.gd::GDScript::-1::1696241205::0::1::::<>Bullet<>::
-EnemyBullet.tscn::PackedScene::9144381503655721103::1696290876::0::1::::<><>::uid://dyjg3i5h0n7dt
-::res://Project/Bullet/PlayerBullet/::1696290876
+::res://Project/::1696328509
+::res://Project/Bullet/::1696328337
+Bullet.gd::GDScript::-1::1696328316::0::1::::Bullet<>Area2D<>::
+Bullet.tscn::PackedScene::8862788469247492305::1696328337::0::1::::<><>::uid://bdypnr384aruu::::res://assets/items/bullet2.png<>res://Project/Bullet/Bullet.gd
+::res://Project/Bullet/EnemyBullet/::1696328318
+EnemyBullet.gd::GDScript::-1::1696327983::0::1::::<>Bullet<>::
+EnemyBullet.tscn::PackedScene::9144381503655721103::1696328318::0::1::::<><>::uid://dyjg3i5h0n7dt::::res://Project/Bullet/Bullet.tscn<>res://Project/Bullet/EnemyBullet/EnemyBullet.gd
+::res://Project/Bullet/PlayerBullet/::1696328318
 PlayerBullet.gd::GDScript::-1::1696240905::0::1::::<>Bullet<>::
-PlayerBullet.tscn::PackedScene::3694944280931046386::1696290876::0::1::::<><>::uid://dyjg3i5h0n7dt
+PlayerBullet.tscn::PackedScene::3694944280931046386::1696328318::0::1::::<><>::uid://dyjg3i5h0n7dt::::res://Project/Bullet/Bullet.tscn<>res://Project/Bullet/PlayerBullet/PlayerBullet.gd<>uid://dsq4x0youkb5x::::res://assets/items/bullet1.png
 ::res://Project/Enemies/::1696243671
-::res://Project/Enemies/Eagle/::1696290875
-Eagle.gd::GDScript::-1::1696284686::0::1::::<>Enemy<>::
-Eagle.tscn::PackedScene::4883628409504017387::1696290875::0::1::::<><>::uid://hypohovtbc5j
+::res://Project/Enemies/Eagle/::1696327581
+Eagle.gd::GDScript::-1::1696327558::0::1::::<>Enemy<>::
+Eagle.tscn::PackedScene::4883628409504017387::1696327581::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/_Enemy/Enemy.tscn<>res://Project/Enemies/Eagle/Eagle.gd<>uid://bw7qidfr730y2::::res://assets/enemies/eagle/eagle-attack.png<>uid://l8u2dbiyo2ny::::res://Project/Shooter/Shooter.tscn
 ::res://Project/Enemies/Frog/::1696243671
 Frog.gd::GDScript::-1::1696198056::0::1::::<>Enemy<>::
 Frog.tscn::PackedScene::754357659875960945::1696243671::0::1::::<><>::uid://hypohovtbc5j
-::res://Project/Enemies/Snail/::1696326758
+::res://Project/Enemies/Snail/::1696327581
 Snail.gd::GDScript::-1::1696198197::0::1::::<>Enemy<>::
-Snail.tscn::PackedScene::3403204667397080897::1696326758::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/_Enemy/Enemy.tscn<>res://Project/Enemies/Snail/Snail.gd<>uid://be7d24fbro8vx::::res://assets/enemies/snail/snail.png
-::res://Project/Enemies/_Enemy/::1696326875
-Enemy.gd::GDScript::-1::1696326875::0::1::::Enemy<>CharacterBody2D<>::
-Enemy.tscn::PackedScene::541803117840116581::1696290876::0::1::::<><>::res://Project/Enemies/_Enemy/Enemy.gd
-::res://Project/EnemyExpolosion/::1696326924
+Snail.tscn::PackedScene::3403204667397080897::1696327581::0::1::::<><>::uid://hypohovtbc5j::::res://Project/Enemies/_Enemy/Enemy.tscn<>res://Project/Enemies/Snail/Snail.gd<>uid://be7d24fbro8vx::::res://assets/enemies/snail/snail.png
+::res://Project/Enemies/_Enemy/::1696368405
+Enemy.gd::GDScript::-1::1696329842::0::1::::Enemy<>CharacterBody2D<>::
+Enemy.tscn::PackedScene::541803117840116581::1696368405::0::1::::<><>::res://Project/Enemies/_Enemy/Enemy.gd
+::res://Project/Explosion/::1696327581
 Explosion.gd::GDScript::-1::1696326650::0::1::::<>AnimatedSprite2D<>::
-Explosion.tscn::PackedScene::38447650781049357::1696326926::0::1::::<><>::uid://dek416ijgeiuw::::res://assets/explosion/enemy-deadth.png<>res://Project/EnemyExpolosion/Explosion.gd<>uid://1e687lmevs73::::res://assets/sound/Enemy Explode.wav
-::res://Project/Explosion/::0
-Explosion.tscn::PackedScene::38447650781049357::1696326948::0::1::::<><>::uid://dek416ijgeiuw::::res://assets/explosion/enemy-deadth.png<>res://Project/EnemyExpolosion/Explosion.gd<>uid://1e687lmevs73::::res://assets/sound/Enemy Explode.wav
-::res://Project/Locus/::1696326758
+Explosion.tscn::PackedScene::38447650781049357::1696327581::0::1::::<><>::uid://dek416ijgeiuw::::res://assets/explosion/enemy-deadth.png<>res://Project/Explosion/Explosion.gd<>uid://1e687lmevs73::::res://assets/sound/Enemy Explode.wav
+::res://Project/Locus/::1696368405
 Locus.gd::GDScript::-1::1696165305::0::1::::<>Node2D<>::
-Locus.tscn::PackedScene::6881271952059012989::1696326758::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://cbtwv8iaictxb::::res://Project/Enemies/Eagle/Eagle.tscn<>uid://boqsjv544tod2::::res://Project/Enemies/Snail/Snail.tscn
-::res://Project/Player/::1696326758
-Player.gd::GDScript::-1::1696292459::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::878196177073863328::1696326758::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd<>uid://l8u2dbiyo2ny::::res://Project/Shooter/Shooter.tscn
+Locus.tscn::PackedScene::6881271952059012989::1696368405::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://cbtwv8iaictxb::::res://Project/Enemies/Eagle/Eagle.tscn<>uid://boqsjv544tod2::::res://Project/Enemies/Snail/Snail.tscn
+::res://Project/PickUp/::1696368877
+PickUp.gd::GDScript::-1::1696368847::0::1::::<>Area2D<>::
+PickUp.tscn::PackedScene::2729361166597523897::1696368877::0::1::::<><>::uid://dmwebwlsqmhs0::::res://assets/items/Bananas.png<>res://Project/PickUp/PickUp.gd<>uid://ixqrltayhiwq::::res://assets/items/Kiwi.png<>uid://csa3mr6cx6s1::::res://assets/items/Cherries.png<>uid://dgp1aonfog223::::res://assets/items/Melon.png
+::res://Project/Player/::1696370020
+Player.gd::GDScript::-1::1696370003::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::878196177073863328::1696370020::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd<>uid://l8u2dbiyo2ny::::res://Project/Shooter/Shooter.tscn
 ::res://Project/PlayerCam/::1696160752
 PlayerCam.gd::GDScript::-1::1696157424::0::1::::<>Camera2D<>::
 PlayerCam.tscn::PackedScene::6908318363184113437::1696160752::0::1::::<><>::res://Project/PlayerCam/PlayerCam.gd
-::res://Project/Shooter/::1696326758
+::res://Project/Shooter/::1696327580
 Shooter.gd::GDScript::-1::1696291836::0::1::::<>Node2D<>::
-Shooter.tscn::PackedScene::841464461704082542::1696326758::0::1::::<><>::res://Project/Shooter/Shooter.gd
-::res://Project/Singletons/::1696326863
+Shooter.tscn::PackedScene::841464461704082542::1696327580::0::1::::<><>::res://Project/Shooter/Shooter.gd
+::res://Project/Singletons/::1696368623
 GameManager.gd::GDScript::-1::1696202719::0::1::::<>Node<>::
-ObjectManager.gd::GDScript::-1::1696326863::0::1::::<>Node<>::
-SignalManager.gd::GDScript::-1::1696177706::0::1::::<>Node<>::
+ObjectManager.gd::GDScript::-1::1696368233::0::1::::<>Node<>::
+SignalManager.gd::GDScript::-1::1696368623::0::1::::<>Node<>::
 SoundManager.gd::GDScript::-1::1696176579::0::1::::<>Node<>::
 ::res://Project/TileSet/::1696158824
 TileSet.tres::TileSet::8045207849666276455::1696158824::0::1::::<><>::uid://cec5lmbw2fi6u

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://mrn06ymamm5u"]
+[gd_scene load_steps=16 format=3 uid="uid://mrn06ymamm5u"]
 
 [ext_resource type="Texture2D" uid="uid://cofkbab2hbk83" path="res://assets/player/player.png" id="1_sv657"]
 [ext_resource type="Script" path="res://Project/Player/Player.gd" id="1_yi0bw"]
@@ -121,10 +121,48 @@ _data = {
 radius = 5.76923
 height = 20.0
 
+[sub_resource type="Animation" id="Animation_eibsg"]
+resource_name = "Invencible"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c8pmg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ecrdg"]
+_data = {
+"Invencible": SubResource("Animation_eibsg"),
+"RESET": SubResource("Animation_c8pmg")
+}
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 light_mask = 0
-platform_floor_layers = 4278190080
-platform_wall_layers = 1
+collision_layer = 0
+platform_floor_layers = 1
 script = ExtResource("1_yi0bw")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -181,4 +219,19 @@ position = Vector2(11, 7)
 [node name="FirePointL" type="Marker2D" parent="."]
 position = Vector2(-11, 7)
 
+[node name="InvencibleAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ecrdg")
+}
+
+[node name="InvencibleTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="HurtTimer" type="Timer" parent="."]
+wait_time = 0.33
+one_shot = true
+
 [connection signal="area_entered" from="HitBox" to="." method="HitBoxEntered"]
+[connection signal="timeout" from="InvencibleTimer" to="." method="InvencibleEnd"]
+[connection signal="timeout" from="HurtTimer" to="." method="HurtTimeOver"]
