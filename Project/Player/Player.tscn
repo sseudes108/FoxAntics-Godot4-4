@@ -133,6 +133,8 @@ hframes = 19
 frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+visibility_layer = 0
 position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_y7i4s")
 
@@ -160,9 +162,10 @@ Velocity"
 volume_db = -20.0
 
 [node name="HitBox" type="Area2D" parent="."]
+visible = false
 scale = Vector2(1.04, 1)
 collision_layer = 2
-collision_mask = 4
+collision_mask = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 6)
@@ -170,6 +173,12 @@ shape = SubResource("CapsuleShape2D_23pjs")
 
 [node name="Shooter" parent="." instance=ExtResource("3_pfosk")]
 speed = 324.0
-delay = 0.33
+delay = 0.01
+
+[node name="FirePointR" type="Marker2D" parent="."]
+position = Vector2(11, 7)
+
+[node name="FirePointL" type="Marker2D" parent="."]
+position = Vector2(-11, 7)
 
 [connection signal="area_entered" from="HitBox" to="." method="HitBoxEntered"]

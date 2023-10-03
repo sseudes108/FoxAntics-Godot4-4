@@ -38,3 +38,6 @@ func ScreenEntered():
 
 func ScreenExited():
 	pass
+
+func HitBoxEntered(area):
+	print("Enemy Hit ", area)

@@ -11,7 +11,8 @@ script = ExtResource("1_lcyp7")
 
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 4
-collision_mask = 0
+collision_mask = 8
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier" to="." method="ScreenEntered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier" to="." method="ScreenExited"]
+[connection signal="area_entered" from="HitBox" to="." method="HitBoxEntered"]

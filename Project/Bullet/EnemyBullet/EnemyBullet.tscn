@@ -4,4 +4,5 @@
 [ext_resource type="Script" path="res://Project/Bullet/EnemyBullet/EnemyBullet.gd" id="2_u8iu7"]
 
 [node name="EnemyBullet" instance=ExtResource("1_00g4h")]
+collision_layer = 16
 script = ExtResource("2_u8iu7")

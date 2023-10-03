@@ -6,3 +6,8 @@ res://Project/Enemies/Eagle/Eagle.tscn
 res://Project/Singletons/ObjectManager.gd
 res://Project/Locus/Locus.tscn
 res://Project/Enemies/Eagle/Eagle.gd
+res://Project/Enemies/_Enemy/Enemy.tscn
+res://Project/Bullet/PlayerBullet/PlayerBullet.tscn
+res://Project/Bullet/EnemyBullet/EnemyBullet.tscn
+res://Project/Enemies/_Enemy/Enemy.gd
+res://Project/Enemies/Snail/Snail.tscn

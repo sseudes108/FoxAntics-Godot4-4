@@ -13,7 +13,7 @@ var canShot: bool = true
 func _ready():
 	timer.wait_time = delay
 
-func Shot(dir: Vector2):
+func Shot(dir: Vector2, point: Vector2):
 	if canShot == false:
 		return
 	
@@ -22,7 +22,7 @@ func Shot(dir: Vector2):
 	sound.pitch_scale = randf_range(0.9,1.1)
 	SoundManager.PlaySound(sound, SoundManager.LASER)
 	
-	ObjectManager.Shot(shooter, dir, speed, global_position)
+	ObjectManager.Shot(shooter, dir, speed, point)
 	timer.start()
 
 func OnTimeout():
