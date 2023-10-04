@@ -1,9 +1,4 @@
-res://Project/PickUp/PickUp.tscn
-res://Project/Locus/Locus.tscn
-res://Project/PickUp/PickUp.gd
-res://Project/Singletons/ObjectManager.gd
-res://Project/Enemies/_Enemy/Enemy.tscn
-res://Project/Singletons/SignalManager.gd
 res://Project/Player/Player.tscn
-res://Project/Player/Player.gd
-res://Project/Singletons/SoundManager.gd
+res://Project/Enemies/Boss/Boss.tscn
+res://Project/Locus/Locus.tscn
+res://Project/Enemies/Boss/Boss.gd
