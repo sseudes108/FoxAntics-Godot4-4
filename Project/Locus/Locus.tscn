@@ -557,7 +557,8 @@ position = Vector2(255, -151)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_m7cw1")]
-position = Vector2(22, -32)
+position = Vector2(-35, -31)
 
 [node name="Boss" parent="." instance=ExtResource("5_hphmx")]
-position = Vector2(223, -51)
+position = Vector2(214, -44)
+health = 5
