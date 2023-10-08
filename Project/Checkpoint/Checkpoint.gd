@@ -1,9 +1,10 @@
 extends Node2D
 
 const APPEAR: String = "parameters/conditions/IsTrigged"
+
 @onready var stateFlag = $StateFlag
 @onready var sprite = $Sprite
-
+@onready var sound = $Sound
 
 func _ready():
 	sprite.hide()
@@ -17,5 +18,8 @@ func BossDead():
 	if stateFlag[APPEAR] == false:
 		stateFlag[APPEAR] = true
 
+
 func CPTrigger(area):
-	print("0")
+	if stateFlag[APPEAR] == true:
+		SoundManager.PlaySound(sound, SoundManager.WIN)
+		print("Level Complete")

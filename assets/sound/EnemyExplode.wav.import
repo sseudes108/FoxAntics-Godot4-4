@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://1e687lmevs73"
-path="res://.godot/imported/Enemy Explode.wav-d653587e1a42e0c9684824bf1b1a21f2.sample"
+path="res://.godot/imported/EnemyExplode.wav-e58a3516f8b5d53e7027347ddcab2d63.sample"
 
 [deps]
 
-source_file="res://assets/sound/Enemy Explode.wav"
-dest_files=["res://.godot/imported/Enemy Explode.wav-d653587e1a42e0c9684824bf1b1a21f2.sample"]
+source_file="res://assets/sound/EnemyExplode.wav"
+dest_files=["res://.godot/imported/EnemyExplode.wav-e58a3516f8b5d53e7027347ddcab2d63.sample"]
 
 [params]
 

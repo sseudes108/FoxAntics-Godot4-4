@@ -264,5 +264,7 @@ active = true
 parameters/conditions/OnHit = false
 parameters/conditions/OnTrigger = false
 
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="area_entered" from="Body/HitBox" to="." method="Hit"]
 [connection signal="area_entered" from="Trigger" to="." method="Trigger"]

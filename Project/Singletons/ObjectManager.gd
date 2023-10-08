@@ -41,12 +41,3 @@ func PickUp(position: Vector2):
 	newPickUp.global_position = position
 	AddChild(newPickUp)
 
-
-	
-	
-	
-	
-	
-	
-	
-	

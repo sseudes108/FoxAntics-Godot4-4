@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://svhyvrvt5nt"]
+[gd_scene load_steps=10 format=3 uid="uid://svhyvrvt5nt"]
 
 [ext_resource type="Texture2D" uid="uid://dek416ijgeiuw" path="res://assets/explosion/enemy-deadth.png" id="1_wkuk3"]
 [ext_resource type="Script" path="res://Project/Explosion/Explosion.gd" id="2_7c1j7"]
-[ext_resource type="AudioStream" uid="uid://1e687lmevs73" path="res://assets/sound/Enemy Explode.wav" id="3_k7rxr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2xqyd"]
 atlas = ExtResource("1_wkuk3")
@@ -63,8 +62,6 @@ frame_progress = 0.850658
 script = ExtResource("2_7c1j7")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_k7rxr")
-autoplay = true
 
 [connection signal="animation_finished" from="." to="." method="AnimationFinished"]
 [connection signal="finished" from="Sound" to="." method="SoundFinished"]

@@ -31,6 +31,38 @@ tracks/1/keys = {
 "values": [26]
 }
 
+[sub_resource type="Animation" id="Animation_g1t2y"]
+resource_name = "FlagFlap"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_5gp48"]
+resource_name = "FlagOpen"
+length = 2.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+}
+
 [sub_resource type="Animation" id="Animation_20vrg"]
 length = 0.001
 tracks/0/type = "value"
@@ -56,38 +88,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [26]
-}
-
-[sub_resource type="Animation" id="Animation_5gp48"]
-resource_name = "FlagOpen"
-length = 2.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
-}
-
-[sub_resource type="Animation" id="Animation_g1t2y"]
-resource_name = "FlagFlap"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kmjsx"]
@@ -130,7 +130,7 @@ states/Start/position = Vector2(68, 106.667)
 transitions = ["FlagOpen", "FlagFlap", SubResource("AnimationNodeStateMachineTransition_dr5td"), "Start", "Appear", SubResource("AnimationNodeStateMachineTransition_uc4ge"), "Appear", "FlagOpen", SubResource("AnimationNodeStateMachineTransition_4f4e5")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jexcu"]
-size = Vector2(49, 58.5)
+size = Vector2(33, 58.5)
 
 [node name="Checkpoint" type="Area2D"]
 collision_layer = 0
@@ -155,7 +155,9 @@ active = true
 parameters/conditions/IsTrigged = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(18.5, 4.75)
+position = Vector2(10.5, 4.75)
 shape = SubResource("RectangleShape2D_jexcu")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="." to="." method="CPTrigger"]

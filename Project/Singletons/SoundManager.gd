@@ -11,8 +11,10 @@ const MUSIC1 = "music1"
 const MUSIC2 = "music2"
 const PICKUP = "pickup"
 const BOSS_ARRIVE = "boss_arrive"
+const BOSS_HIT = "boss_hit"
 const JUMP = "jump"
 const WIN = "win"
+const ENEMY_EXPLODE = "enemy_explode"
 
 var SOUNDS = {
 	CHECKPOINT: preload("res://assets/sound/checkpoint.wav"),
@@ -27,7 +29,9 @@ var SOUNDS = {
 	MUSIC2: preload("res://assets/sound/Flowing Rocks.ogg"),
 	PICKUP: preload("res://assets/sound/pickup5.ogg"),
 	BOSS_ARRIVE: preload("res://assets/sound/boss_arrive.wav"),
-	WIN: preload("res://assets/sound/you_win.ogg")
+	BOSS_HIT: preload("res://assets/sound/Boss Hit.wav"),
+	WIN: preload("res://assets/sound/Warp Jingle.wav"),
+	ENEMY_EXPLODE: preload("res://assets/sound/EnemyExplode.wav")
 }
 
 func PlaySound(player: AudioStreamPlayer2D, sound: String):
