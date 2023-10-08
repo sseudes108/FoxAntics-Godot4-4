@@ -9,13 +9,13 @@ func _ready():
 	sprite.hide()
 	SignalManager.BossKilled.connect(BossDead)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func BossDead():
 	sprite.show()
-	print("0")
 	if stateFlag[APPEAR] == false:
 		stateFlag[APPEAR] = true
+
+func CPTrigger(area):
+	print("0")

@@ -6,8 +6,6 @@ const TRIGGER: String = "parameters/conditions/OnTrigger"
 @onready var stateMachine = $StateMachine
 @onready var body = $Body
 
-@onready var hitBox = $Body/HitBox
-
 @export var health: int = 1
 @export var points: int = 5
 
@@ -24,7 +22,10 @@ func Trigger(area):
 		stateMachine[TRIGGER] = true
 
 func Hit(area):
-	TakeHit()
+	if stateMachine[TRIGGER] == true:
+		TakeHit()
+	else:
+		return
 
 func HitTween():
 	var tween = get_tree().create_tween()
