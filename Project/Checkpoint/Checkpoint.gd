@@ -10,14 +10,10 @@ func _ready():
 	sprite.hide()
 	SignalManager.BossKilled.connect(BossDead)
 
-func _process(delta):
-	pass
-
 func BossDead():
 	sprite.show()
 	if stateFlag[APPEAR] == false:
 		stateFlag[APPEAR] = true
-
 
 func CPTrigger(area):
 	if stateFlag[APPEAR] == true:

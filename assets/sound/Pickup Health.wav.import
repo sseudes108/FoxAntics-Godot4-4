@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dl0287b0uc1lj"
+path="res://.godot/imported/Pickup Health.wav-97654e4b8501637c0b6166eb296616ea.sample"
+
+[deps]
+
+source_file="res://assets/sound/Pickup Health.wav"
+dest_files=["res://.godot/imported/Pickup Health.wav-97654e4b8501637c0b6166eb296616ea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -523,8 +523,6 @@ frame_progress = 0.501578
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cv0px")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.2
 one_shot = true

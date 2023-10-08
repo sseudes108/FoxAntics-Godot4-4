@@ -27,7 +27,7 @@ var SOUNDS = {
 	LASER: preload("res://assets/sound/laser.wav"),
 	MUSIC1: preload("res://assets/sound/Farm Frolics.ogg"),
 	MUSIC2: preload("res://assets/sound/Flowing Rocks.ogg"),
-	PICKUP: preload("res://assets/sound/pickup5.ogg"),
+	PICKUP: preload("res://assets/sound/Pickup Health.wav"),
 	BOSS_ARRIVE: preload("res://assets/sound/boss_arrive.wav"),
 	BOSS_HIT: preload("res://assets/sound/Boss Hit.wav"),
 	WIN: preload("res://assets/sound/Warp Jingle.wav"),
