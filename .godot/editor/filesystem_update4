@@ -1,5 +1,7 @@
-res://Project/Enemies/Boss/Boss.tscn
 res://Project/Locus/Locus.tscn
-res://Project/Singletons/SignalManager.gd
-res://Project/Enemies/Boss/Boss.gd
+res://Project/Enemies/Boss/Boss.tscn
 res://Project/Locus/Locus.gd
+res://Project/Checkpoint/Checkpoint.tscn
+res://Project/Checkpoint/Checkpoint.gd
+res://Project/Enemies/Boss/Boss.gd
+res://Project/Singletons/SignalManager.gd

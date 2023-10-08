@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696585002
+::res://::1696762860
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -123,9 +123,9 @@ EnemyBullet.tscn::PackedScene::9144381503655721103::1696328318::0::1::::<><>::ui
 PlayerBullet.gd::GDScript::-1::1696240905::0::1::::<>Bullet<>::
 PlayerBullet.tscn::PackedScene::3694944280931046386::1696328318::0::1::::<><>::uid://dyjg3i5h0n7dt
 ::res://Project/Enemies/::1696413125
-::res://Project/Enemies/Boss/::1696502735
-Boss.gd::GDScript::-1::1696415479::0::1::::<>Node2D<>::
-Boss.tscn::PackedScene::6756012625059549250::1696502735::0::1::::<><>::res://Project/Enemies/Boss/Boss.gd<>uid://b7bruiij1ncqp::::res://assets/enemies/boss/boss.png
+::res://Project/Enemies/Boss/::1696589706
+Boss.gd::GDScript::-1::1696589475::0::1::::<>Node2D<>::
+Boss.tscn::PackedScene::6756012625059549250::1696589706::0::1::::<><>::res://Project/Enemies/Boss/Boss.gd<>uid://b7bruiij1ncqp::::res://assets/enemies/boss/boss.png
 ::res://Project/Enemies/Eagle/::1696327581
 Eagle.gd::GDScript::-1::1696327558::0::1::::<>Enemy<>::
 Eagle.tscn::PackedScene::4883628409504017387::1696327581::0::1::::<><>::uid://hypohovtbc5j
@@ -141,9 +141,9 @@ Enemy.tscn::PackedScene::541803117840116581::1696368405::0::1::::<><>::res://Pro
 ::res://Project/Explosion/::1696327581
 Explosion.gd::GDScript::-1::1696326650::0::1::::<>AnimatedSprite2D<>::
 Explosion.tscn::PackedScene::38447650781049357::1696327581::0::1::::<><>::uid://dek416ijgeiuw
-::res://Project/Locus/::1696502476
-Locus.gd::GDScript::-1::1696165305::0::1::::<>Node2D<>::
-Locus.tscn::PackedScene::6881271952059012989::1696502476::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://c3iwsnikvkmm1::::res://Project/Enemies/Boss/Boss.tscn
+::res://Project/Locus/::1696589805
+Locus.gd::GDScript::-1::1696589805::0::1::::<>Node2D<>::
+Locus.tscn::PackedScene::6881271952059012989::1696589805::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://c3iwsnikvkmm1::::res://Project/Enemies/Boss/Boss.tscn
 ::res://Project/PickUp/::1696368877
 PickUp.gd::GDScript::-1::1696368847::0::1::::<>Area2D<>::
 PickUp.tscn::PackedScene::2729361166597523897::1696368877::0::1::::<><>::uid://dmwebwlsqmhs0
@@ -156,10 +156,10 @@ PlayerCam.tscn::PackedScene::6908318363184113437::1696160752::0::1::::<><>::res:
 ::res://Project/Shooter/::1696327580
 Shooter.gd::GDScript::-1::1696291836::0::1::::<>Node2D<>::
 Shooter.tscn::PackedScene::841464461704082542::1696327580::0::1::::<><>::res://Project/Shooter/Shooter.gd
-::res://Project/Singletons/::1696370109
+::res://Project/Singletons/::1696586392
 GameManager.gd::GDScript::-1::1696202719::0::1::::<>Node<>::
 ObjectManager.gd::GDScript::-1::1696368233::0::1::::<>Node<>::
-SignalManager.gd::GDScript::-1::1696368623::0::1::::<>Node<>::
+SignalManager.gd::GDScript::-1::1696586392::0::1::::<>Node<>::
 SoundManager.gd::GDScript::-1::1696370109::0::1::::<>Node<>::
 ::res://Project/TileSet/::1696158824
 TileSet.tres::TileSet::8045207849666276455::1696158824::0::1::::<><>::uid://cec5lmbw2fi6u

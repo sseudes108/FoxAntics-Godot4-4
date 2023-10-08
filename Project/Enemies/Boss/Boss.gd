@@ -6,7 +6,9 @@ const TRIGGER: String = "parameters/conditions/OnTrigger"
 @onready var stateMachine = $StateMachine
 @onready var body = $Body
 
-@export var health: int = 2
+@onready var hitBox = $Body/HitBox
+
+@export var health: int = 1
 @export var points: int = 5
 
 var invencible: bool = false
@@ -36,7 +38,7 @@ func Invencible(key: bool):
 func Health():
 	health -= 1
 	if health <= 0:
-		SignalManager.BossKilled.emit(points)
+		SignalManager.BossKilled.emit()
 		set_process(false)
 		queue_free()
 	print(health)
