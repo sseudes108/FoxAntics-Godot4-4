@@ -25,7 +25,7 @@ class_name Player
 
 #constants
 const GRAVITY: float = 1080
-const RUN_SPEED: float = 216
+const RUN_SPEED: float = 420
 const MAX_FALL: float = 660
 const JUMP_FORCE: float = -270
 const HURT_JUMP_FORCE: float = -172
@@ -34,6 +34,7 @@ var canDoubleJump: bool = false
 var invencible: bool = false
 
 var health: int = 5
+var coyote: float = 0.2
 
 #State Machine
 enum PLAYER_STATE {IDLE,RUN,JUMP,FALL,HURT}
@@ -45,6 +46,10 @@ func _ready():
 func _physics_process(delta):
 	if is_on_floor() == false:
 		velocity.y += GRAVITY * delta
+	
+	#Coyote
+	if is_on_floor() == false:
+		coyote -= delta
 	
 	Inputs()
 	move_and_slide()
@@ -75,14 +80,27 @@ func Inputs():
 		sprite.flip_h = false
 	
 	#Jump
-	if Input.is_action_just_pressed("jump") == true and is_on_floor() == true:
+	if (Input.is_action_just_pressed("jump") == true and 
+			is_on_floor() == true):
 		Jump()
 		canDoubleJump = true
 	
-	if (Input.is_action_just_pressed("jump") == true and 
-	is_on_floor() == false and canDoubleJump == true):
+	if (Input.is_action_just_pressed("jump") == true and is_on_floor() == false 
+	and canDoubleJump == true):
 		Jump()
 		canDoubleJump = false
+	
+	
+	#if coyote > 0:
+	#	if Input.is_action_just_pressed("jump") == true:
+	#		Jump()
+	#		canDoubleJump = true
+	
+	#if canDoubleJump == true:
+	#	if Input.is_action_just_pressed("jump") == true:
+	#		if is_on_floor() == false:
+	#			Jump()
+	#			canDoubleJump = false
 	
 	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
 	

@@ -1,11 +1,6 @@
-res://Project/Enemies/Boss/Boss.tscn
-res://Project/Enemies/Boss/Boss.gd
 res://Project/Locus/Locus.tscn
-res://Project/MovingPlatform/MovingPlatform.tscn
-res://Project/Player/Player.tscn
-res://Project/Player/Player.gd
-res://Project/MovingPlatform/MovingPlatform.gd
+res://Project/FloorSpikes/FloorSpikes.tscn
 res://Project/Locus/Locus.gd
 res://Project/SpikeBall/SpikeBall.tscn
-res://Project/SpikeBall/SpikeBall.gd
-res://Project/FloorSpikes/FloorSpikes.tscn
+res://Project/Player/Player.tscn
+res://Project/Player/Player.gd

@@ -1,8 +1,10 @@
-CollisionShape2D
 Sprite2D
+ParallaxLayer
+ParallaxBackground
+Node
+CollisionShape2D
 Area2D
 Path2D
-Node
 AnimationPlayer
 PathFollow2D
 Marker2D
