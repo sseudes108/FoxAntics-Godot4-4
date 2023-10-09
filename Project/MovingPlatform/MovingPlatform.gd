@@ -10,6 +10,7 @@ var tween: Tween
 
 func _ready():
 	TimeToMove()
+	Move()
 
 func TimeToMove():
 	var delta = p1.global_position.distance_to(p2.global_position)
@@ -21,7 +22,8 @@ func Move():
 	tween.tween_property(self,"global_position",p1.global_position,timeToMove)
 	tween.tween_property(self,"global_position",p2.global_position,timeToMove)
 
-
+func _exit_tree():
+	tween.kill()
 
 
 

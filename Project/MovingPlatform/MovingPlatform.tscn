@@ -9,6 +9,9 @@ size = Vector2(46, 6)
 [node name="MovingPlatform" type="AnimatableBody2D"]
 collision_mask = 32
 script = ExtResource("1_8vece")
+p1 = NodePath("")
+p2 = NodePath("")
+speed = 108.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_uqtn7")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5blsqq7q7my4"]
+[gd_scene load_steps=16 format=3 uid="uid://c5blsqq7q7my4"]
 
 [ext_resource type="Script" path="res://Project/Locus/Locus.gd" id="1_kna1n"]
 [ext_resource type="Texture2D" uid="uid://cec5lmbw2fi6u" path="res://assets/tiles/Terrain (16x16).png" id="1_oh0we"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://k0ofpqeuhsqr" path="res://Project/Enemies/Frog/Frog.tscn" id="8_kwgoa"]
 [ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="9_1364q"]
 [ext_resource type="PackedScene" uid="uid://cw6tsk23dy3em" path="res://Project/MovingPlatform/MovingPlatform.tscn" id="10_ahe6x"]
+[ext_resource type="PackedScene" uid="uid://3pc5j7r06od2" path="res://Project/SpikeBall/SpikeBall.tscn" id="11_bd6u8"]
+[ext_resource type="PackedScene" uid="uid://c2ur4abbcux21" path="res://Project/FloorSpikes/FloorSpikes.tscn" id="12_ybja8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_675wh"]
 texture = ExtResource("1_oh0we")
@@ -583,6 +585,12 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_675wh")
 
+[sub_resource type="Curve2D" id="Curve2D_fcue7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 561, -95, -70.3186, -8.96681, 70.3186, 8.96681, 648, -183, 35.3953, -50.0253, -35.3953, 50.0253, 751, -127, 0, 0, 0, 0, 561, -95)
+}
+point_count = 4
+
 [node name="Locus" type="Node2D"]
 script = ExtResource("1_kna1n")
 
@@ -628,5 +636,27 @@ position = Vector2(-72, -31)
 [node name="Boss" parent="." instance=ExtResource("5_hphmx")]
 position = Vector2(1102, -43)
 
-[node name="MovingPlatform" parent="." instance=ExtResource("10_ahe6x")]
-position = Vector2(-14, -60)
+[node name="MovingPlatform" parent="." node_paths=PackedStringArray("p1", "p2") instance=ExtResource("10_ahe6x")]
+position = Vector2(-1, -62)
+p1 = NodePath("Markers/P1")
+p2 = NodePath("Markers/P2")
+
+[node name="Markers" type="Node" parent="MovingPlatform"]
+
+[node name="P1" type="Marker2D" parent="MovingPlatform/Markers"]
+position = Vector2(-46, -57)
+
+[node name="P2" type="Marker2D" parent="MovingPlatform/Markers"]
+position = Vector2(150, -53)
+
+[node name="Paths" type="Node" parent="."]
+
+[node name="Spike1" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_fcue7")
+
+[node name="SpikeBall" parent="Paths/Spike1" instance=ExtResource("11_bd6u8")]
+position = Vector2(561, -95)
+rotation = -0.791112
+
+[node name="FloorSpikes" parent="." instance=ExtResource("12_ybja8")]
+position = Vector2(147, -16)
