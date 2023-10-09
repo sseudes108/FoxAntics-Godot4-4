@@ -57,9 +57,3 @@ func TakeHit():
 	HitTween()
 	Health()
 
-#func ChangeDirection():
-#	var xDirection = sign(player.global_position.x - global_position.x)
-#	if xDirection > 0:
-#		body.scale.x = (scale.x *= -1)
-#	else:
-#		body#

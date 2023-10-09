@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5blsqq7q7my4"]
+[gd_scene load_steps=13 format=3 uid="uid://c5blsqq7q7my4"]
 
 [ext_resource type="Script" path="res://Project/Locus/Locus.gd" id="1_kna1n"]
 [ext_resource type="Texture2D" uid="uid://cec5lmbw2fi6u" path="res://assets/tiles/Terrain (16x16).png" id="1_oh0we"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://boqsjv544tod2" path="res://Project/Enemies/Snail/Snail.tscn" id="7_4jhdq"]
 [ext_resource type="PackedScene" uid="uid://k0ofpqeuhsqr" path="res://Project/Enemies/Frog/Frog.tscn" id="8_kwgoa"]
 [ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="9_1364q"]
+[ext_resource type="PackedScene" uid="uid://cw6tsk23dy3em" path="res://Project/MovingPlatform/MovingPlatform.tscn" id="10_ahe6x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_675wh"]
 texture = ExtResource("1_oh0we")
@@ -597,10 +598,6 @@ zoom = Vector2(2, 2)
 [node name="Checkpoint" parent="." instance=ExtResource("6_gi5we")]
 position = Vector2(1093, -47)
 
-[node name="Boss" parent="." instance=ExtResource("5_hphmx")]
-position = Vector2(1109, -44)
-health = 3
-
 [node name="Snail3" parent="." instance=ExtResource("7_4jhdq")]
 position = Vector2(118, -201)
 
@@ -627,3 +624,9 @@ position = Vector2(344, -287)
 
 [node name="Player" parent="." instance=ExtResource("3_m7cw1")]
 position = Vector2(-72, -31)
+
+[node name="Boss" parent="." instance=ExtResource("5_hphmx")]
+position = Vector2(1102, -43)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("10_ahe6x")]
+position = Vector2(-14, -60)

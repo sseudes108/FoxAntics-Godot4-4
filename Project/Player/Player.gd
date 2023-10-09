@@ -33,6 +33,8 @@ const HURT_JUMP_FORCE: float = -172
 var canDoubleJump: bool = false
 var invencible: bool = false
 
+var health: int = 5
+
 #State Machine
 enum PLAYER_STATE {IDLE,RUN,JUMP,FALL,HURT}
 var currentState = PLAYER_STATE.IDLE
@@ -50,8 +52,9 @@ func _physics_process(delta):
 	UpdateDebugLabel()
 
 func UpdateDebugLabel():
-	debugLabel.text = "Grounded: %s\n%s\n%s/%s" % [
+	debugLabel.text = "Grounded: %s\nHP:%s\n%s\n%s/%s" % [
 		is_on_floor(),
+		health,
 		PLAYER_STATE.keys()[currentState],
 		velocity.x, velocity.y
 		]
@@ -150,6 +153,10 @@ func TakeHit():
 	if invencible == true:
 		return
 	else:
+		health -= 1
+		if health <= 0:
+			pass
+		
 		InvencibleStart()
 		Hurt()
 		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
@@ -171,7 +178,6 @@ func InvencibleStart():
 func InvencibleEnd():
 	invencible = false
 	invencibleAnim.stop()
-
 
 
 

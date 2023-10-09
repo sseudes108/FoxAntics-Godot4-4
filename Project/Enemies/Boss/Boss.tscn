@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://c3iwsnikvkmm1"]
+[gd_scene load_steps=27 format=3 uid="uid://c3iwsnikvkmm1"]
 
 [ext_resource type="Script" path="res://Project/Enemies/Boss/Boss.gd" id="1_n33ej"]
 [ext_resource type="Texture2D" uid="uid://b7bruiij1ncqp" path="res://assets/enemies/boss/boss.png" id="1_qdcpw"]
+[ext_resource type="AudioStream" uid="uid://baqaetrrqgnw" path="res://assets/sound/land.wav" id="3_dcd6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bld52"]
 size = Vector2(25, 49)
@@ -113,6 +114,29 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -150), Vector2(0, 0), Vector2(0, -150), Vector2(0, 0), Vector2(0, -150), Vector2(0, 0)]
 }
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_dcd6h")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_dcd6h")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_dcd6h")
+}],
+"times": PackedFloat32Array(1, 2, 3)
+}
+tracks/1/use_blend = false
 
 [sub_resource type="Animation" id="Animation_263f0"]
 length = 0.001
