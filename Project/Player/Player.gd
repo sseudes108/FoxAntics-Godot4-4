@@ -47,9 +47,10 @@ func _physics_process(delta):
 	if is_on_floor() == false:
 		velocity.y += GRAVITY * delta
 	
-	#Coyote
 	if is_on_floor() == false:
 		coyote -= delta
+	else:
+		coyote = 0.2
 	
 	Inputs()
 	move_and_slide()
@@ -80,27 +81,15 @@ func Inputs():
 		sprite.flip_h = false
 	
 	#Jump
-	if (Input.is_action_just_pressed("jump") == true and 
-			is_on_floor() == true):
-		Jump()
-		canDoubleJump = true
+	if Input.is_action_just_pressed("jump") == true:
+		if (is_on_floor() == true or coyote > 0):
+			Jump()
+			canDoubleJump = true
 	
-	if (Input.is_action_just_pressed("jump") == true and is_on_floor() == false 
-	and canDoubleJump == true):
-		Jump()
-		canDoubleJump = false
-	
-	
-	#if coyote > 0:
-	#	if Input.is_action_just_pressed("jump") == true:
-	#		Jump()
-	#		canDoubleJump = true
-	
-	#if canDoubleJump == true:
-	#	if Input.is_action_just_pressed("jump") == true:
-	#		if is_on_floor() == false:
-	#			Jump()
-	#			canDoubleJump = false
+	if canDoubleJump == true:
+		if Input.is_action_just_pressed("jump") == true and is_on_floor() == false:
+			Jump()
+			canDoubleJump = false
 	
 	velocity.y = clampf(velocity.y, JUMP_FORCE, MAX_FALL)
 	
