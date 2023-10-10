@@ -1,0 +1,143 @@
+[gd_scene load_steps=6 format=3 uid="uid://chsr403ed8el3"]
+
+[ext_resource type="LabelSettings" uid="uid://dnp5nc7it15dp" path="res://Project/HUD/HUD42.tres" id="1_7te2o"]
+[ext_resource type="Texture2D" uid="uid://dkp60c3qp348s" path="res://assets/items/PixelHeart.png" id="2_fqgsk"]
+[ext_resource type="LabelSettings" uid="uid://8i0rmwhcc6ai" path="res://Project/HUD/Main66.tres" id="3_84kil"]
+[ext_resource type="FontFile" uid="uid://b5henisehf2md" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_g5qlq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ueftp"]
+font = ExtResource("3_g5qlq")
+font_size = 27
+font_color = Color(0.752941, 1, 1, 1)
+outline_size = 2
+outline_color = Color(0.0352941, 0.0941176, 0.0117647, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0000"
+label_settings = ExtResource("1_7te2o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="L1" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fqgsk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L2" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fqgsk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L3" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fqgsk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L4" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fqgsk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L5" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fqgsk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ColorScreen" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.00392157, 0.0980392, 0.847059)
+
+[node name="LevelComplete" type="VBoxContainer" parent="ColorScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorScreen/LevelComplete"]
+layout_mode = 2
+text = "LEVEL COMPLETE!"
+label_settings = ExtResource("3_84kil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorScreen/LevelComplete"]
+layout_mode = 2
+text = "Press jump to next level"
+label_settings = SubResource("LabelSettings_ueftp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver" type="VBoxContainer" parent="ColorScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorScreen/GameOver"]
+layout_mode = 2
+text = "Game over!"
+label_settings = ExtResource("3_84kil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorScreen/GameOver"]
+layout_mode = 2
+text = "Press jump to main menu"
+label_settings = SubResource("LabelSettings_ueftp")
+horizontal_alignment = 1
+vertical_alignment = 1

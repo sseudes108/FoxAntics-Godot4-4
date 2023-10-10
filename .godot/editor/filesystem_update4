@@ -7,3 +7,6 @@ res://Project/Player/Player.gd
 res://Project/Singletons/SignalManager.gd
 res://Project/PlayerCam/PlayerCam.tscn
 res://Project/PlayerCam/PlayerCam.gd
+res://Project/HUD/HUD.tscn
+res://Project/HUD/Main66.tres
+res://Project/HUD/HUD42.tres
