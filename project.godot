@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Fox Antics"
-run/main_scene="res://Project/Locus/Locus.tscn"
+run/main_scene="res://Project/MainScene/MainScene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.png"
 

@@ -1,12 +1,12 @@
-CanvasLayer
+AudioStreamPlayer
 Label
 VBoxContainer
-ColorRect
 TextureRect
+CanvasLayer
+ColorRect
 HBoxContainer
 Sprite2D
 MarginContainer
-AudioStreamPlayer
 AudioStreamPlayer2D
 Timer
 ParallaxBackground

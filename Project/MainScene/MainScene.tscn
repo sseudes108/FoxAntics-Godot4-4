@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://bood1r5k6s6ch"]
+
+[ext_resource type="Texture2D" uid="uid://dvxiikdfnnudn" path="res://assets/backgrounds/platformer_background_4.png" id="1_d7tw0"]
+[ext_resource type="FontFile" uid="uid://b5henisehf2md" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_f2te8"]
+[ext_resource type="AudioStream" uid="uid://tu2wkykgugii" path="res://assets/sound/Title Screen.mp3" id="3_xr1sr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lq2qo"]
+font = ExtResource("1_f2te8")
+font_size = 81
+font_color = Color(0.262745, 0.517647, 1, 1)
+outline_size = 6
+outline_color = Color(0, 0.00392157, 0.231373, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n27d8"]
+font = ExtResource("1_f2te8")
+font_size = 33
+font_color = Color(0.72549, 0.890196, 1, 1)
+outline_size = 3
+outline_color = Color(0.0078125, 0.015625, 0.25, 1)
+
+[node name="Main" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d7tw0")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -35.0
+offset_right = 187.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "FOXY ANTICS"
+label_settings = SubResource("LabelSettings_lq2qo")
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "hiscore: 0000"
+label_settings = SubResource("LabelSettings_n27d8")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xr1sr")
+autoplay = true

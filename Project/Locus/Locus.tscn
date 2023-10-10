@@ -1,21 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5blsqq7q7my4"]
+[gd_scene load_steps=11 format=3 uid="uid://c5blsqq7q7my4"]
 
 [ext_resource type="Script" path="res://Project/Locus/Locus.gd" id="1_kna1n"]
 [ext_resource type="Texture2D" uid="uid://cec5lmbw2fi6u" path="res://assets/tiles/Terrain (16x16).png" id="1_oh0we"]
 [ext_resource type="PackedScene" uid="uid://c5oo82hbjyrub" path="res://Project/PlayerCam/PlayerCam.tscn" id="2_6xtfw"]
 [ext_resource type="PackedScene" uid="uid://mrn06ymamm5u" path="res://Project/Player/Player.tscn" id="3_m7cw1"]
-[ext_resource type="PackedScene" uid="uid://b7t3qotybbvbh" path="res://Project/Checkpoint/Checkpoint.tscn" id="6_gi5we"]
 [ext_resource type="PackedScene" uid="uid://cpauu7flxa26l" path="res://Project/ScrollingBackGround/ScrollingBackGround.tscn" id="9_wsx20"]
-[ext_resource type="PackedScene" uid="uid://cw6tsk23dy3em" path="res://Project/MovingPlatform/MovingPlatform.tscn" id="10_ahe6x"]
-[ext_resource type="Texture2D" uid="uid://bxmxwpw75rx3f" path="res://assets/backgrounds/game_background_1/layers/clouds_1.png" id="10_x7mlp"]
-[ext_resource type="Texture2D" uid="uid://bc5wi6re0khes" path="res://assets/backgrounds/game_background_1/layers/rocks_1.png" id="10_y8pkd"]
-[ext_resource type="PackedScene" uid="uid://3pc5j7r06od2" path="res://Project/SpikeBall/SpikeBall.tscn" id="11_bd6u8"]
-[ext_resource type="Texture2D" uid="uid://byebpgr2q8lv5" path="res://assets/backgrounds/game_background_1/layers/clouds_2.png" id="11_my8ld"]
-[ext_resource type="Texture2D" uid="uid://dmv833reruekb" path="res://assets/backgrounds/game_background_1/layers/clouds_3.png" id="12_gnx73"]
-[ext_resource type="PackedScene" uid="uid://c2ur4abbcux21" path="res://Project/FloorSpikes/FloorSpikes.tscn" id="12_ybja8"]
-[ext_resource type="Texture2D" uid="uid://c2xui7p8sn0hp" path="res://assets/backgrounds/game_background_1/layers/clouds_4.png" id="13_12lfo"]
-[ext_resource type="Texture2D" uid="uid://0qw2invbmoom" path="res://assets/backgrounds/game_background_1/layers/sky.png" id="13_fx30b"]
-[ext_resource type="Texture2D" uid="uid://cpdai65q3tmym" path="res://assets/backgrounds/game_background_1/layers/rocks_2.png" id="14_27182"]
 [ext_resource type="AudioStream" uid="uid://dtdrqfhgf5yo8" path="res://assets/sound/Main Level.wav" id="17_1iqmp"]
 [ext_resource type="PackedScene" uid="uid://chsr403ed8el3" path="res://Project/HUD/HUD.tscn" id="18_m7dpt"]
 
@@ -600,85 +589,12 @@ point_count = 4
 [node name="Locus" type="Node2D"]
 script = ExtResource("1_kna1n")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 154)
-motion_mirroring = Vector2(1382.4, 0)
+[node name="HUD" parent="HUD" instance=ExtResource("18_m7dpt")]
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
-position = Vector2(0, -133)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("13_fx30b")
-offset = Vector2(0, -300)
-
-[node name="Clouds 1" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 216)
-motion_scale = Vector2(0.8, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds 1"]
-position = Vector2(0, -133)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("10_x7mlp")
-offset = Vector2(0, -300)
-
-[node name="Clouds 2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 216)
-motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds 2"]
-position = Vector2(0, -133)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("11_my8ld")
-offset = Vector2(0, -300)
-
-[node name="Clouds 3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 216)
-motion_scale = Vector2(0.6, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds 3"]
-position = Vector2(0, -133)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("12_gnx73")
-offset = Vector2(0, -300)
-
-[node name="Clouds 4" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 216)
-motion_scale = Vector2(0.5, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds 4"]
-position = Vector2(0, -133)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("13_12lfo")
-offset = Vector2(0, -300)
-
-[node name="Rocks 1" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 154)
-motion_scale = Vector2(0.3, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Rocks 1"]
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("10_y8pkd")
-offset = Vector2(0, -300)
-
-[node name="Rocks 2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 154)
-motion_scale = Vector2(0.2, 1)
-motion_mirroring = Vector2(1382.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Rocks 2"]
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("14_27182")
-offset = Vector2(0, -300)
-
-[node name="ScrollingBackGround" parent="." instance=ExtResource("9_wsx20")]
-level = 4
+[node name="Parallax" parent="." instance=ExtResource("9_wsx20")]
+level = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rswos")
@@ -692,9 +608,6 @@ limit_top = -500
 limit_right = 1000
 limit_bottom = 0
 
-[node name="Checkpoint" parent="." instance=ExtResource("6_gi5we")]
-position = Vector2(1093, -47)
-
 [node name="Player" parent="." instance=ExtResource("3_m7cw1")]
 position = Vector2(-72, -31)
 
@@ -702,49 +615,12 @@ position = Vector2(-72, -31)
 
 [node name="World" type="Node" parent="."]
 
-[node name="MovingPlatform" parent="." node_paths=PackedStringArray("p1", "p2") instance=ExtResource("10_ahe6x")]
-position = Vector2(-1, -62)
-p1 = NodePath("Markers/P1")
-p2 = NodePath("Markers/P2")
-
-[node name="Markers" type="Node" parent="MovingPlatform"]
-
-[node name="P1" type="Marker2D" parent="MovingPlatform/Markers"]
-position = Vector2(-46, -57)
-
-[node name="P2" type="Marker2D" parent="MovingPlatform/Markers"]
-position = Vector2(150, -53)
-
-[node name="MovingPlatform2" parent="." node_paths=PackedStringArray("p1", "p2") instance=ExtResource("10_ahe6x")]
-position = Vector2(-1034, -57)
-p1 = NodePath("Markers/P1")
-p2 = NodePath("Markers/P2")
-
-[node name="Markers" type="Node" parent="MovingPlatform2"]
-
-[node name="P1" type="Marker2D" parent="MovingPlatform2/Markers"]
-position = Vector2(-1456, -373)
-
-[node name="P2" type="Marker2D" parent="MovingPlatform2/Markers"]
-position = Vector2(-956, -58)
-
-[node name="FloorSpikes" parent="." instance=ExtResource("12_ybja8")]
-position = Vector2(147, -16)
-
 [node name="Paths" type="Node" parent="."]
 
 [node name="Spike1" type="Path2D" parent="Paths"]
 curve = SubResource("Curve2D_fcue7")
 
-[node name="SpikeBall" parent="Paths/Spike1" instance=ExtResource("11_bd6u8")]
-position = Vector2(561, -95)
-rotation = -0.791112
-
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_1iqmp")
 volume_db = -15.0
 autoplay = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("18_m7dpt")]

@@ -1,3 +1,4 @@
+res://Project/MainScene
 res://Project/HUD
 res://Project/ScrollingBackGround
 res://Project/FloorSpikes
@@ -19,4 +20,3 @@ res://assets/enemies/snail
 res://Project/Player
 res://Project/PlayerCam
 res://Project/Locus
-res://Project/TileSet

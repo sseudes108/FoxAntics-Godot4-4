@@ -42,41 +42,42 @@ size_flags_horizontal = 3
 text = "0000"
 label_settings = ExtResource("1_7te2o")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="HeartContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="L1" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="L1" type="TextureRect" parent="MarginContainer/HBoxContainer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("2_fqgsk")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="L2" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="L2" type="TextureRect" parent="MarginContainer/HBoxContainer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("2_fqgsk")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="L3" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="L3" type="TextureRect" parent="MarginContainer/HBoxContainer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("2_fqgsk")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="L4" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="L4" type="TextureRect" parent="MarginContainer/HBoxContainer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("2_fqgsk")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="L5" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="L5" type="TextureRect" parent="MarginContainer/HBoxContainer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("2_fqgsk")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="ColorScreen" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,7 +115,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameOver" type="VBoxContainer" parent="ColorScreen"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

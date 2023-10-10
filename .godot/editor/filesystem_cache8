@@ -75,7 +75,7 @@ enemy-deadth.png::CompressedTexture2D::7462470067603179006::1665670752::16961548
 ::res://assets/fonts/::1696154808
 gemunu-libre-v8-latin-700.ttf::FontFile::2709611744506404999::1665339830::1696154808::1::::<><>::
 LuckiestGuy-Regular.ttf::FontFile::4506803168588925343::1294275600::1696154808::1::::<><>::
-::res://assets/items/::1696942254
+::res://assets/items/::1696942262
 Bananas.png::CompressedTexture2D::8047190312436228729::1566481356::1696154809::1::::<><>::
 bullet1.png::CompressedTexture2D::8457494497501160039::1665649770::1696154809::1::::<><>::
 bullet2.png::CompressedTexture2D::2647467188606512624::1668164790::1696154809::1::::<><>::
@@ -88,7 +88,7 @@ PixelHeart.png::CompressedTexture2D::7894043174443277368::1696942254::1696942262
 ::res://assets/player/::1696154809
 player-single.png::CompressedTexture2D::2476525467640066506::1668423488::1696154809::1::::<><>::
 player.png::CompressedTexture2D::5766416025591491134::1665670852::1696154809::1::::<><>::
-::res://assets/sound/::1696939626
+::res://assets/sound/::1696944444
 Boss Hit.wav::AudioStreamWAV::3901286721942018440::1459862844::1696781614::1::::<><>::
 Boss Impact.wav::AudioStreamWAV::1638586343627688249::1459945822::1696781613::1::::<><>::
 boss_arrive.wav::AudioStreamWAV::8547635420845063580::1459463224::1696781613::1::::<><>::
@@ -110,6 +110,7 @@ Pickup Health.wav::AudioStreamWAV::7984648748407440279::1459949116::1696798709::
 pickup.wav::AudioStreamWAV::1626603380912363809::1459953214::1696781613::1::::<><>::
 Player Death.wav::AudioStreamWAV::1952176315747095657::1459450990::1696781613::1::::<><>::
 Player Hurt.wav::AudioStreamWAV::7194624474526886481::1459945822::1696781613::1::::<><>::
+Title Screen.mp3::AudioStreamMP3::1376554793246386032::1573174428::1696944457::1::::<><>::
 Warp Jingle.wav::AudioStreamWAV::4962722097841802753::1409325258::1696781613::1::::<><>::
 you_win.ogg::AudioStreamOggVorbis::7902787748759025494::1438880178::1696781613::1::::<><>::
 ::res://assets/tiles/::1696154809
@@ -119,7 +120,7 @@ blue_button00.png::CompressedTexture2D::332071209605615550::1567906410::16961548
 green_button00.png::CompressedTexture2D::3988406449075763063::1567906412::1696154809::1::::<><>::
 level_select_frame_128.png::CompressedTexture2D::5270708444710693305::1665570478::1696154809::1::::<><>::
 yellow_button00.png::CompressedTexture2D::6974682486863816688::1567906416::1696154809::1::::<><>::
-::res://Project/::1696939911
+::res://Project/::1696943979
 ::res://Project/Bullet/::1696328337
 Bullet.gd::GDScript::-1::1696328316::0::1::::Bullet<>Area2D<>::
 Bullet.tscn::PackedScene::8862788469247492305::1696328337::0::1::::<><>::uid://bdypnr384aruu
@@ -153,13 +154,15 @@ Explosion.gd::GDScript::-1::1696781737::0::1::::<>AnimatedSprite2D<>::
 Explosion.tscn::PackedScene::38447650781049357::1696799292::0::1::::<><>::uid://dek416ijgeiuw
 ::res://Project/FloorSpikes/::1696879057
 FloorSpikes.tscn::PackedScene::6710311679188269996::1696879057::0::1::::<><>::uid://bgtfycng6t5yr
-::res://Project/HUD/::1696941946
-HUD.tscn::PackedScene::5302407405851106650::1696941946::0::1::::<><>::uid://dnp5nc7it15dp::::res://Project/HUD/HUD42.tres<>uid://bvn3ct581aj76::::res://assets/items/pixel heart 2.png<>uid://8i0rmwhcc6ai::::res://Project/HUD/Main66.tres<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
-HUD42.tres::LabelSettings::8104527564658750445::1696940460::0::1::::<><>::uid://beus56pcew4qd::::res://assets/fonts/gemunu-libre-v8-latin-700.ttf
-Main66.tres::LabelSettings::2334295809989825684::1696941554::0::1::::<><>::uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
-::res://Project/Locus/::1696942152
+::res://Project/HUD/::1696944389
+HUD.tscn::PackedScene::5302407405851106650::1696944389::0::1::::<><>::uid://dnp5nc7it15dp::::res://Project/HUD/HUD42.tres<>uid://dkp60c3qp348s::::res://assets/items/PixelHeart.png<>uid://8i0rmwhcc6ai::::res://Project/HUD/Main66.tres<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
+HUD42.tres::LabelSettings::8104527564658750445::1696942638::0::1::::<><>::uid://beus56pcew4qd::::res://assets/fonts/gemunu-libre-v8-latin-700.ttf
+Main66.tres::LabelSettings::2334295809989825684::1696942828::0::1::::<><>::uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
+::res://Project/Locus/::1696944389
 Locus.gd::GDScript::-1::1696934754::0::1::::<>Node2D<>::
-Locus.tscn::PackedScene::6881271952059012989::1696942152::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://b7t3qotybbvbh::::res://Project/Checkpoint/Checkpoint.tscn<>uid://cpauu7flxa26l::::res://Project/ScrollingBackGround/ScrollingBackGround.tscn<>uid://cw6tsk23dy3em::::res://Project/MovingPlatform/MovingPlatform.tscn<>uid://bxmxwpw75rx3f::::res://assets/backgrounds/game_background_1/layers/clouds_1.png<>uid://bc5wi6re0khes::::res://assets/backgrounds/game_background_1/layers/rocks_1.png<>uid://3pc5j7r06od2::::res://Project/SpikeBall/SpikeBall.tscn<>uid://byebpgr2q8lv5::::res://assets/backgrounds/game_background_1/layers/clouds_2.png<>uid://dmv833reruekb::::res://assets/backgrounds/game_background_1/layers/clouds_3.png<>uid://c2ur4abbcux21::::res://Project/FloorSpikes/FloorSpikes.tscn<>uid://c2xui7p8sn0hp::::res://assets/backgrounds/game_background_1/layers/clouds_4.png<>uid://0qw2invbmoom::::res://assets/backgrounds/game_background_1/layers/sky.png<>uid://cpdai65q3tmym::::res://assets/backgrounds/game_background_1/layers/rocks_2.png<>uid://dtdrqfhgf5yo8::::res://assets/sound/Main Level.wav<>uid://chsr403ed8el3::::res://Project/HUD/HUD.tscn
+Locus.tscn::PackedScene::6881271952059012989::1696944389::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://b7t3qotybbvbh::::res://Project/Checkpoint/Checkpoint.tscn<>uid://cpauu7flxa26l::::res://Project/ScrollingBackGround/ScrollingBackGround.tscn<>uid://cw6tsk23dy3em::::res://Project/MovingPlatform/MovingPlatform.tscn<>uid://bxmxwpw75rx3f::::res://assets/backgrounds/game_background_1/layers/clouds_1.png<>uid://bc5wi6re0khes::::res://assets/backgrounds/game_background_1/layers/rocks_1.png<>uid://3pc5j7r06od2::::res://Project/SpikeBall/SpikeBall.tscn<>uid://byebpgr2q8lv5::::res://assets/backgrounds/game_background_1/layers/clouds_2.png<>uid://dmv833reruekb::::res://assets/backgrounds/game_background_1/layers/clouds_3.png<>uid://c2ur4abbcux21::::res://Project/FloorSpikes/FloorSpikes.tscn<>uid://c2xui7p8sn0hp::::res://assets/backgrounds/game_background_1/layers/clouds_4.png<>uid://0qw2invbmoom::::res://assets/backgrounds/game_background_1/layers/sky.png<>uid://cpdai65q3tmym::::res://assets/backgrounds/game_background_1/layers/rocks_2.png<>uid://dtdrqfhgf5yo8::::res://assets/sound/Main Level.wav<>uid://chsr403ed8el3::::res://Project/HUD/HUD.tscn
+::res://Project/MainScene/::1696944390
+MainScene.tscn::PackedScene::3398195304539826951::1696944390::0::1::::<><>::uid://dvxiikdfnnudn::::res://assets/backgrounds/platformer_background_4.png<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf<>uid://bm67y0j2m1gm7::::res://assets/sound/Farm Frolics.ogg
 ::res://Project/MovingPlatform/::1696859367
 MovingPlatform.gd::GDScript::-1::1696856949::0::1::::<>AnimatableBody2D<>::
 MovingPlatform.tscn::PackedScene::6382177973172015924::1696859367::0::1::::<><>::res://Project/MovingPlatform/MovingPlatform.gd<>uid://cec5lmbw2fi6u
