@@ -1,3 +1,4 @@
+Timer
 ParallaxBackground
 Sprite2D
 ParallaxLayer
@@ -12,7 +13,6 @@ AnimatableBody2D
 AudioStreamPlayer2D
 AnimationTree
 Node2D
-Timer
 AnimatedSprite2D
 RayCast2D
 VisibleOnScreenNotifier2D

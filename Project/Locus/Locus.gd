@@ -7,7 +7,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	pass
+	playerCam.position = player.position
 
 func _physics_process(delta):
-	playerCam.position = player.position
+	pass

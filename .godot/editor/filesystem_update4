@@ -1,5 +1,9 @@
-res://Project/Player/Player.tscn
-res://Project/Player/Player.gd
 res://Project/Locus/Locus.tscn
 res://Project/ScrollingBackGround/ScrollingBackGround.tscn
 res://Project/ScrollingBackGround/ScrollingBackGround.gd
+res://Project/Player/Player.tscn
+res://Project/Locus/Locus.gd
+res://Project/Player/Player.gd
+res://Project/Singletons/SignalManager.gd
+res://Project/PlayerCam/PlayerCam.tscn
+res://Project/PlayerCam/PlayerCam.gd

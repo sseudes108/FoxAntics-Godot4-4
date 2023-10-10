@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696883178
+::res://::1696931546
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -117,7 +117,7 @@ blue_button00.png::CompressedTexture2D::332071209605615550::1567906410::16961548
 green_button00.png::CompressedTexture2D::3988406449075763063::1567906412::1696154809::1::::<><>::
 level_select_frame_128.png::CompressedTexture2D::5270708444710693305::1665570478::1696154809::1::::<><>::
 yellow_button00.png::CompressedTexture2D::6974682486863816688::1567906416::1696154809::1::::<><>::
-::res://Project/::1696859191
+::res://Project/::1696885752
 ::res://Project/Bullet/::1696328337
 Bullet.gd::GDScript::-1::1696328316::0::1::::Bullet<>Area2D<>::
 Bullet.tscn::PackedScene::8862788469247492305::1696328337::0::1::::<><>::uid://bdypnr384aruu
@@ -150,22 +150,25 @@ Enemy.tscn::PackedScene::541803117840116581::1696799292::0::1::::<><>::res://Pro
 Explosion.gd::GDScript::-1::1696781737::0::1::::<>AnimatedSprite2D<>::
 Explosion.tscn::PackedScene::38447650781049357::1696799292::0::1::::<><>::uid://dek416ijgeiuw
 ::res://Project/FloorSpikes/::1696879057
-FloorSpikes.tscn::PackedScene::6710311679188269996::1696879057::0::1::::<><>::uid://bgtfycng6t5yr::::res://assets/danger/floor_spikes.png
-::res://Project/Locus/::1696881187
+FloorSpikes.tscn::PackedScene::6710311679188269996::1696879057::0::1::::<><>::uid://bgtfycng6t5yr
+::res://Project/Locus/::1696886107
 Locus.gd::GDScript::-1::1696878807::0::1::::<>Node2D<>::
-Locus.tscn::PackedScene::6881271952059012989::1696881187::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://b7t3qotybbvbh::::res://Project/Checkpoint/Checkpoint.tscn<>uid://cw6tsk23dy3em::::res://Project/MovingPlatform/MovingPlatform.tscn<>uid://3pc5j7r06od2::::res://Project/SpikeBall/SpikeBall.tscn<>uid://c2ur4abbcux21::::res://Project/FloorSpikes/FloorSpikes.tscn<>uid://0qw2invbmoom::::res://assets/backgrounds/game_background_1/layers/sky.png<>uid://cpdai65q3tmym::::res://assets/backgrounds/game_background_1/layers/rocks_2.png
+Locus.tscn::PackedScene::6881271952059012989::1696886107::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://b7t3qotybbvbh::::res://Project/Checkpoint/Checkpoint.tscn<>uid://cw6tsk23dy3em::::res://Project/MovingPlatform/MovingPlatform.tscn<>uid://bxmxwpw75rx3f::::res://assets/backgrounds/game_background_1/layers/clouds_1.png<>uid://bc5wi6re0khes::::res://assets/backgrounds/game_background_1/layers/rocks_1.png<>uid://3pc5j7r06od2::::res://Project/SpikeBall/SpikeBall.tscn<>uid://byebpgr2q8lv5::::res://assets/backgrounds/game_background_1/layers/clouds_2.png<>uid://dmv833reruekb::::res://assets/backgrounds/game_background_1/layers/clouds_3.png<>uid://c2ur4abbcux21::::res://Project/FloorSpikes/FloorSpikes.tscn<>uid://c2xui7p8sn0hp::::res://assets/backgrounds/game_background_1/layers/clouds_4.png<>uid://0qw2invbmoom::::res://assets/backgrounds/game_background_1/layers/sky.png<>uid://cpdai65q3tmym::::res://assets/backgrounds/game_background_1/layers/rocks_2.png
 ::res://Project/MovingPlatform/::1696859367
 MovingPlatform.gd::GDScript::-1::1696856949::0::1::::<>AnimatableBody2D<>::
 MovingPlatform.tscn::PackedScene::6382177973172015924::1696859367::0::1::::<><>::res://Project/MovingPlatform/MovingPlatform.gd<>uid://cec5lmbw2fi6u
 ::res://Project/PickUp/::1696799531
 PickUp.gd::GDScript::-1::1696799141::0::1::::<>Area2D<>::
 PickUp.tscn::PackedScene::2729361166597523897::1696799531::0::1::::<><>::uid://dmwebwlsqmhs0
-::res://Project/Player/::1696883157
-Player.gd::GDScript::-1::1696883157::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::878196177073863328::1696883157::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd<>uid://l8u2dbiyo2ny::::res://Project/Shooter/Shooter.tscn
+::res://Project/Player/::1696885454
+Player.gd::GDScript::-1::1696883932::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::878196177073863328::1696885454::0::1::::<><>::uid://cofkbab2hbk83::::res://assets/player/player.png<>res://Project/Player/Player.gd<>uid://l8u2dbiyo2ny::::res://Project/Shooter/Shooter.tscn
 ::res://Project/PlayerCam/::1696160752
 PlayerCam.gd::GDScript::-1::1696157424::0::1::::<>Camera2D<>::
 PlayerCam.tscn::PackedScene::6908318363184113437::1696160752::0::1::::<><>::res://Project/PlayerCam/PlayerCam.gd
+::res://Project/ScrollingBackGround/::1696886107
+ScrollingBackGround.gd::GDScript::-1::1696886107::0::1::::<>ParallaxBackground<>::
+ScrollingBackGround.tscn::PackedScene::5826925766691899429::1696885925::0::1::::<><>::res://Project/ScrollingBackGround/ScrollingBackGround.gd
 ::res://Project/Shooter/::1696327580
 Shooter.gd::GDScript::-1::1696291836::0::1::::<>Node2D<>::
 Shooter.tscn::PackedScene::841464461704082542::1696327580::0::1::::<><>::res://Project/Shooter/Shooter.gd
@@ -176,6 +179,6 @@ SignalManager.gd::GDScript::-1::1696765916::0::1::::<>Node<>::
 SoundManager.gd::GDScript::-1::1696798729::0::1::::<>Node<>::
 ::res://Project/SpikeBall/::1696879057
 SpikeBall.gd::GDScript::-1::1696859075::0::1::::<>PathFollow2D<>::
-SpikeBall.tscn::PackedScene::1996428818929421153::1696879057::0::1::::<><>::uid://bb6diptcprrsq::::res://assets/danger/spiked_ball.png<>res://Project/SpikeBall/SpikeBall.gd
+SpikeBall.tscn::PackedScene::1996428818929421153::1696879057::0::1::::<><>::uid://bb6diptcprrsq
 ::res://Project/TileSet/::1696158824
 TileSet.tres::TileSet::8045207849666276455::1696158824::0::1::::<><>::uid://cec5lmbw2fi6u

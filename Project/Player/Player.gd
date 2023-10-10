@@ -150,6 +150,7 @@ func ChangeState(newState: PLAYER_STATE):
 			anim.play("Fall")
 		PLAYER_STATE.HURT:
 			anim.play("Hurt")
+			Hurt()
 
 #Collisions
 func HitBoxEntered(area):
@@ -165,12 +166,11 @@ func TakeHit():
 			pass
 		
 		InvencibleStart()
-		Hurt()
 		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
+		ChangeState(PLAYER_STATE.HURT)
 
 func Hurt():
-	ChangeState(PLAYER_STATE.HURT)
-	anim.play("Hurt")
+	SignalManager.PlayerHit.emit(0)
 	velocity.y = HURT_JUMP_FORCE
 	hurtTimer.start()
 

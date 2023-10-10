@@ -42,8 +42,73 @@ var BG_FILES = {
 
 @export_range(1,4) var level: int
 @export var mirrorX: float = 1382.4
-@export var spriteOffset: Vector2 = Vector2(0,-300)
+@export var spriteOffset: Vector2 = Vector2(0,-500)
 @export var spriteScale: Vector2 = Vector2(0.72,0.72)
 
 func _ready():
-	pass
+	AddBackground()
+
+func IncrementSpeed() -> float:
+	return 1.0 / BG_FILES[level].size()
+
+func GetSprite(texture: Texture2D) -> Sprite2D:
+	var sprite = Sprite2D.new()
+	sprite.texture = texture
+	sprite.scale = spriteScale
+	sprite.offset = spriteOffset
+	return sprite
+
+func AddLayer(texture: Texture2D, timeOffset: float):
+	var sprite = GetSprite(texture)
+	
+	var paraLayer = ParallaxLayer.new()
+	paraLayer.motion_mirroring = Vector2(mirrorX,0)
+	paraLayer.motion_scale = Vector2(timeOffset,1)
+	paraLayer.add_child(sprite)
+	
+	add_child(paraLayer)
+
+func AddBackground():
+	var increment = IncrementSpeed()
+	var timeOffset = increment
+	var fileList = BG_FILES[level]
+	
+	for index in range(fileList.size()):
+		var backgFile = fileList[index]
+		if index == 0:
+			AddLayer(backgFile,1)
+		else:
+			timeOffset += increment
+			AddLayer(backgFile,timeOffset)
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
