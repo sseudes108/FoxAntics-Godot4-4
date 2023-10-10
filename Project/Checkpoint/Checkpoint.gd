@@ -18,4 +18,3 @@ func BossDead():
 func CPTrigger(area):
 	if stateFlag[APPEAR] == true:
 		SoundManager.PlaySound(sound, SoundManager.WIN)
-		print("Level Complete")

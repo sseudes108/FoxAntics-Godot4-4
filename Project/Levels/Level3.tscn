@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10phi3bwksym"]
+
+[ext_resource type="PackedScene" uid="uid://c5blsqq7q7my4" path="res://Project/Locus/Locus.tscn" id="1_qoqkj"]
+[ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="2_pcgtr"]
+
+[node name="Locus" instance=ExtResource("1_qoqkj")]
+
+[node name="Parallax" parent="." index="1"]
+level = 3
+
+[node name="Eagle" parent="Enemies" index="0" instance=ExtResource("2_pcgtr")]
+position = Vector2(-23, -185)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://chsr403ed8el3"]
+[gd_scene load_steps=7 format=3 uid="uid://chsr403ed8el3"]
 
+[ext_resource type="Script" path="res://Project/HUD/HUD.gd" id="1_5enwc"]
 [ext_resource type="LabelSettings" uid="uid://dnp5nc7it15dp" path="res://Project/HUD/HUD42.tres" id="1_7te2o"]
 [ext_resource type="Texture2D" uid="uid://dkp60c3qp348s" path="res://assets/items/PixelHeart.png" id="2_fqgsk"]
 [ext_resource type="LabelSettings" uid="uid://8i0rmwhcc6ai" path="res://Project/HUD/Main66.tres" id="3_84kil"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5enwc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -87,6 +89,7 @@ grow_vertical = 2
 color = Color(0, 0.00392157, 0.0980392, 0.847059)
 
 [node name="LevelComplete" type="VBoxContainer" parent="ColorScreen"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -115,6 +118,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameOver" type="VBoxContainer" parent="ColorScreen"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

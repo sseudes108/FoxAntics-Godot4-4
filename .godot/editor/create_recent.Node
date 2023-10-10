@@ -1,3 +1,4 @@
+Area2D
 AudioStreamPlayer
 Label
 VBoxContainer
@@ -13,7 +14,6 @@ ParallaxBackground
 ParallaxLayer
 Node
 CollisionShape2D
-Area2D
 Path2D
 AnimationPlayer
 PathFollow2D

@@ -1,10 +1,12 @@
+res://Project/Checkpoint
+res://Project/Levels
+res://Project/Locus
 res://Project/MainScene
 res://Project/HUD
 res://Project/ScrollingBackGround
 res://Project/FloorSpikes
 res://Project/SpikeBall
 res://Project/MovingPlatform
-res://Project/Checkpoint
 res://Project/Enemies/Boss
 res://assets/items
 res://Project/PickUp
@@ -18,5 +20,3 @@ res://assets/enemies/eagle
 res://assets/enemies/frog
 res://assets/enemies/snail
 res://Project/Player
-res://Project/PlayerCam
-res://Project/Locus

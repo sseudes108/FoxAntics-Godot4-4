@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djjaxq8sxy5yq"]
+
+[ext_resource type="PackedScene" uid="uid://c5blsqq7q7my4" path="res://Project/Locus/Locus.tscn" id="1_mxwqo"]
+[ext_resource type="PackedScene" uid="uid://k0ofpqeuhsqr" path="res://Project/Enemies/Frog/Frog.tscn" id="2_2jfxi"]
+
+[node name="Locus" instance=ExtResource("1_mxwqo")]
+
+[node name="Frog" parent="Enemies" index="0" instance=ExtResource("2_2jfxi")]
+position = Vector2(58, -24)
