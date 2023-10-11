@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://c5blsqq7q7my4"]
+[gd_scene load_steps=10 format=3 uid="uid://c5blsqq7q7my4"]
 
 [ext_resource type="Script" path="res://Project/Locus/Locus.gd" id="1_kna1n"]
 [ext_resource type="Texture2D" uid="uid://cec5lmbw2fi6u" path="res://assets/tiles/Terrain (16x16).png" id="1_oh0we"]
 [ext_resource type="PackedScene" uid="uid://c5oo82hbjyrub" path="res://Project/PlayerCam/PlayerCam.tscn" id="2_6xtfw"]
 [ext_resource type="PackedScene" uid="uid://mrn06ymamm5u" path="res://Project/Player/Player.tscn" id="3_m7cw1"]
-[ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="8_44s1h"]
 [ext_resource type="PackedScene" uid="uid://cpauu7flxa26l" path="res://Project/ScrollingBackGround/ScrollingBackGround.tscn" id="9_wsx20"]
 [ext_resource type="AudioStream" uid="uid://dtdrqfhgf5yo8" path="res://assets/sound/Main Level.wav" id="17_1iqmp"]
 [ext_resource type="PackedScene" uid="uid://chsr403ed8el3" path="res://Project/HUD/HUD.tscn" id="18_m7dpt"]
@@ -617,6 +616,3 @@ collision_mask = 3
 stream = ExtResource("17_1iqmp")
 volume_db = -15.0
 autoplay = true
-
-[node name="Eagle" parent="." instance=ExtResource("8_44s1h")]
-position = Vector2(21, -177)

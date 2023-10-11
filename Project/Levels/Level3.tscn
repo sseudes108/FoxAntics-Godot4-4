@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c10phi3bwksym"]
+[gd_scene load_steps=4 format=3 uid="uid://c10phi3bwksym"]
 
 [ext_resource type="PackedScene" uid="uid://c5blsqq7q7my4" path="res://Project/Locus/Locus.tscn" id="1_qoqkj"]
 [ext_resource type="PackedScene" uid="uid://cbtwv8iaictxb" path="res://Project/Enemies/Eagle/Eagle.tscn" id="2_pcgtr"]
+[ext_resource type="PackedScene" uid="uid://jilwaft7vb10" path="res://Project/Checkpoint/LevelCheckpoint.tscn" id="3_ntpgi"]
 
 [node name="Locus" instance=ExtResource("1_qoqkj")]
 
@@ -10,3 +11,6 @@ level = 3
 
 [node name="Eagle" parent="Enemies" index="0" instance=ExtResource("2_pcgtr")]
 position = Vector2(-23, -185)
+
+[node name="LevelCheckpoint" parent="." index="10" instance=ExtResource("3_ntpgi")]
+position = Vector2(141, -48)

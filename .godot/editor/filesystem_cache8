@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696972570
+::res://::1697053854
 icon.png::CompressedTexture2D::8419969494249790368::1668423488::1696154809::1::::<><>::
 README.md::TextFile::-1::1696154898::0::1::::<><>::
 ::res://assets/::1696154800
@@ -130,10 +130,11 @@ EnemyBullet.tscn::PackedScene::9144381503655721103::1696975008::0::1::::<><>::ui
 ::res://Project/Bullet/PlayerBullet/::1696328318
 PlayerBullet.gd::GDScript::-1::1696240905::0::1::::<>Bullet<>::
 PlayerBullet.tscn::PackedScene::3694944280931046386::1696328318::0::1::::<><>::uid://dyjg3i5h0n7dt
-::res://Project/Checkpoint/::1696977412
+::res://Project/Checkpoint/::1696977730
 Checkpoint.gd::GDScript::-1::1696976486::0::1::::<>Node2D<>::
 Checkpoint.tscn::PackedScene::4673416271707248469::1696976638::0::1::::<><>::res://Project/Checkpoint/Checkpoint.gd<>uid://cyvc2x0f5bxb::::res://assets/items/checkpoint.png
-LevelCheckpoint.tscn::PackedScene::648921797791993817::1696977447::0::1::::<><>::res://Project/Checkpoint/Checkpoint.gd<>uid://cyvc2x0f5bxb::::res://assets/items/checkpoint.png
+LevelCheckpoint.gd::GDScript::-1::1696977700::0::1::::<>Area2D<>::
+LevelCheckpoint.tscn::PackedScene::648921797791993817::1696977730::0::1::::<><>::uid://cyvc2x0f5bxb::::res://assets/items/checkpoint.png<>res://Project/Checkpoint/LevelCheckpoint.gd
 ::res://Project/Enemies/::1696413125
 ::res://Project/Enemies/Boss/::1696850869
 Boss.gd::GDScript::-1::1696850685::0::1::::<>Node2D<>::
@@ -155,21 +156,21 @@ Explosion.gd::GDScript::-1::1696781737::0::1::::<>AnimatedSprite2D<>::
 Explosion.tscn::PackedScene::38447650781049357::1696799292::0::1::::<><>::uid://dek416ijgeiuw
 ::res://Project/FloorSpikes/::1696879057
 FloorSpikes.tscn::PackedScene::6710311679188269996::1696879057::0::1::::<><>::uid://bgtfycng6t5yr
-::res://Project/HUD/::1696977321
+::res://Project/HUD/::1696977773
 HUD42.tres::LabelSettings::8104527564658750445::1696975193::0::1::::<><>::uid://beus56pcew4qd::::res://assets/fonts/gemunu-libre-v8-latin-700.ttf
+HUD.gd::GDScript::-1::1696977773::0::1::::<>Control<>::
 HUD.tscn::PackedScene::5302407405851106650::1696977426::0::1::::<><>::res://Project/HUD/HUD.gd<>uid://dnp5nc7it15dp::::res://Project/HUD/HUD42.tres<>uid://dkp60c3qp348s::::res://assets/items/PixelHeart.png<>uid://8i0rmwhcc6ai::::res://Project/HUD/Main66.tres<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
 Main66.tres::LabelSettings::2334295809989825684::1696975193::0::1::::<><>::uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf
-HUD.gd::GDScript::-1::1696976141::0::1::::<>Control<>::
-::res://Project/Levels/::1696977321
-Level1.tscn::PackedScene::3848216169774755472::1696977435::0::1::::<><>::uid://c5blsqq7q7my4::::res://Project/Locus/Locus.tscn
+::res://Project/Levels/::1696977773
+Level1.tscn::PackedScene::3848216169774755472::1696977773::0::1::::<><>::uid://c5blsqq7q7my4::::res://Project/Locus/Locus.tscn<>uid://jilwaft7vb10::::res://Project/Checkpoint/LevelCheckpoint.tscn
 Level2.tscn::PackedScene::7809583009069645416::1696977425::0::1::::<><>::uid://c5blsqq7q7my4::::res://Project/Locus/Locus.tscn<>uid://k0ofpqeuhsqr::::res://Project/Enemies/Frog/Frog.tscn
 Level3.tscn::PackedScene::6650284464791944020::1696977425::0::1::::<><>::uid://c5blsqq7q7my4::::res://Project/Locus/Locus.tscn<>uid://cbtwv8iaictxb::::res://Project/Enemies/Eagle/Eagle.tscn
 ::res://Project/Locus/::1696977266
 Locus.gd::GDScript::-1::1696977266::0::1::::<>Node2D<>::
 Locus.tscn::PackedScene::6881271952059012989::1696975050::0::1::::<><>::res://Project/Locus/Locus.gd<>uid://cec5lmbw2fi6u::::res://assets/tiles/Terrain (16x16).png<>uid://c5oo82hbjyrub::::res://Project/PlayerCam/PlayerCam.tscn<>uid://mrn06ymamm5u::::res://Project/Player/Player.tscn<>uid://cbtwv8iaictxb::::res://Project/Enemies/Eagle/Eagle.tscn<>uid://cpauu7flxa26l::::res://Project/ScrollingBackGround/ScrollingBackGround.tscn<>uid://dtdrqfhgf5yo8::::res://assets/sound/Main Level.wav<>uid://chsr403ed8el3::::res://Project/HUD/HUD.tscn
 ::res://Project/MainScene/::1696975008
-MainScene.tscn::PackedScene::3398195304539826951::1696975008::0::1::::<><>::uid://dvxiikdfnnudn::::res://assets/backgrounds/platformer_background_4.png<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf<>res://Project/MainScene/MainScene.gd<>uid://tu2wkykgugii::::res://assets/sound/Title Screen.mp3
 MainScene.gd::GDScript::-1::1696974232::0::1::::<>CanvasLayer<>::
+MainScene.tscn::PackedScene::3398195304539826951::1696975008::0::1::::<><>::uid://dvxiikdfnnudn::::res://assets/backgrounds/platformer_background_4.png<>uid://b5henisehf2md::::res://assets/fonts/LuckiestGuy-Regular.ttf<>res://Project/MainScene/MainScene.gd<>uid://tu2wkykgugii::::res://assets/sound/Title Screen.mp3
 ::res://Project/MovingPlatform/::1696859367
 MovingPlatform.gd::GDScript::-1::1696856949::0::1::::<>AnimatableBody2D<>::
 MovingPlatform.tscn::PackedScene::6382177973172015924::1696859367::0::1::::<><>::res://Project/MovingPlatform/MovingPlatform.gd<>uid://cec5lmbw2fi6u

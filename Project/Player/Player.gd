@@ -69,7 +69,7 @@ func Inputs():
 	velocity.x = 0
 	
 	#no Input
-	if currentState == PLAYER_STATE.HURT:
+	if (currentState == PLAYER_STATE.HURT or Engine.time_scale == 0):
 		return
 	
 	#Move
@@ -162,15 +162,16 @@ func TakeHit():
 		return
 	else:
 		health -= 1
+		SignalManager.PlayerHit.emit(health)
+		
 		if health <= 0:
-			pass
+			SignalManager.GameOver.emit()
 		
 		InvencibleStart()
 		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
 		ChangeState(PLAYER_STATE.HURT)
 
 func Hurt():
-	SignalManager.PlayerHit.emit(0)
 	velocity.y = HURT_JUMP_FORCE
 	hurtTimer.start()
 
@@ -185,12 +186,3 @@ func InvencibleStart():
 func InvencibleEnd():
 	invencible = false
 	invencibleAnim.stop()
-
-
-
-
-
-	
-	
-	
-	

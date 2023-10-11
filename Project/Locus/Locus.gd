@@ -6,8 +6,7 @@ extends Node2D
 
 
 func _ready():
-	pass
-	#parallax.level = GameManager.currentLevel
+	Engine.time_scale = 1
 
 func _process(delta):
 	playerCam.position = player.position
