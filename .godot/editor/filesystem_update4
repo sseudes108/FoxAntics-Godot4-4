@@ -13,3 +13,11 @@ res://Project/HUD/HUD.tscn
 res://Project/Singletons/SignalManager.gd
 res://Project/Enemies/Eagle/Eagle.tscn
 res://Project/Locus/Locus.tscn
+res://Project/PlayerCam/PlayerCam.tscn
+res://Project/PlayerCam/PlayerCam.gd
+res://Project/Bullet/Bullet.gd
+res://Project/PickUp/PickUp.gd
+res://Project/Checkpoint/LevelCheckpoint.gd
+res://Project/Enemies/_Enemy/Enemy.gd
+res://Project/Enemies/_Enemy/Enemy.tscn
+res://Project/Singletons/GameManager.gd

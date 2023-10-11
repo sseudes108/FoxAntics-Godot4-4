@@ -20,5 +20,5 @@ func SetUp(dir: Vector2, speed: float):
 func Destroy():
 	queue_free()
 
-func Hit(area):
+func Hit(_area):
 	Destroy()

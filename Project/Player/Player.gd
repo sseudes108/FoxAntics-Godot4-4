@@ -163,13 +163,13 @@ func TakeHit():
 	else:
 		health -= 1
 		SignalManager.PlayerHit.emit(health)
-		
+		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
 		if health <= 0:
 			SignalManager.GameOver.emit()
 		
 		InvencibleStart()
-		SoundManager.PlaySound(sound,SoundManager.DAMAGE)
 		ChangeState(PLAYER_STATE.HURT)
+		
 
 func Hurt():
 	velocity.y = HURT_JUMP_FORCE

@@ -7,8 +7,9 @@ extends Camera2D
 func _ready():
 	set_process(false)
 	SignalManager.PlayerHit.connect(PlayerHit)
+	SignalManager.GameOver.connect(onTimeout)
 
-func _process(delta):
+func _process(_delta):
 	offset = RandomOffSet()
 
 func RandomOffSet() -> Vector2:
@@ -21,7 +22,7 @@ func Shake():
 	set_process(true)
 	timer.start()
 
-func PlayerHit(health: int):
+func PlayerHit(_health):
 	Shake()
 
 func onTimeout():

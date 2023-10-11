@@ -8,8 +8,11 @@ const MAIN_SCENE: PackedScene = preload("res://Project/MainScene/MainScene.tscn"
 var currentLevel: int = 0
 var levelScenes = {}
 
+var score: int
+
 func _ready():
 	InitLevelScenes()
+	SignalManager.EnemyHit.connect(Score)
 
 func InitLevelScenes():
 	for level in range(1, TOTAL_LEVELS + 1):
@@ -27,3 +30,7 @@ func SetNextLevel():
 func LoadNextLevel():
 	SetNextLevel()
 	get_tree().change_scene_to_packed(levelScenes[currentLevel])
+
+func Score(points, _position):
+	score += points
+	SignalManager.UpdateScore.emit(score)

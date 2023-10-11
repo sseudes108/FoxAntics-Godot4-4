@@ -16,7 +16,7 @@ var die: bool = false
 func _ready():
 	player = get_tree().get_nodes_in_group(GameManager.GROUP_PLAYER)[0]
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	OffScreen()
 
 func OffScreen():
@@ -41,5 +41,5 @@ func ScreenEntered():
 func ScreenExited():
 	pass
 
-func HitBoxEntered(area):
+func HitBoxEntered(_area):
 	Die()
