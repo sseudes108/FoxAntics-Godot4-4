@@ -25,7 +25,7 @@ class_name Player
 
 #constants
 const GRAVITY: float = 1080
-const RUN_SPEED: float = 420
+const RUN_SPEED: float = 216
 const MAX_FALL: float = 660
 const JUMP_FORCE: float = -270
 const HURT_JUMP_FORCE: float = -172
@@ -169,7 +169,6 @@ func TakeHit():
 		
 		InvencibleStart()
 		ChangeState(PLAYER_STATE.HURT)
-		
 
 func Hurt():
 	velocity.y = HURT_JUMP_FORCE

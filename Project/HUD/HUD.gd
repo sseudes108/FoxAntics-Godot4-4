@@ -22,9 +22,10 @@ func _ready():
 	SignalManager.LevelComplete.connect(LevelComplete)
 	SignalManager.GameOver.connect(GameOver)
 	SignalManager.PlayerHit.connect(UpdateHearts)
+	SignalManager.PickedUp.connect(UpdateHearts)
 
 func _process(_delta):
-	scoreLabel.text = "%s" %GameManager.score
+	scoreLabel.text = "00%s" %GameManager.score
 	
 	if Input.is_action_just_pressed("Pause"):
 		paused = !paused

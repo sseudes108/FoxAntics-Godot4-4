@@ -130,7 +130,7 @@ states/Start/position = Vector2(68, 106.667)
 transitions = ["FlagOpen", "FlagFlap", SubResource("AnimationNodeStateMachineTransition_dr5td"), "Start", "Appear", SubResource("AnimationNodeStateMachineTransition_uc4ge"), "Appear", "FlagOpen", SubResource("AnimationNodeStateMachineTransition_4f4e5")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jexcu"]
-size = Vector2(33, 58.5)
+size = Vector2(41, 264)
 
 [node name="LevelCheckpoint" type="Area2D"]
 collision_layer = 0
@@ -155,7 +155,7 @@ active = true
 parameters/conditions/IsTrigged = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, 4.75)
+position = Vector2(14.5, -98)
 shape = SubResource("RectangleShape2D_jexcu")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
