@@ -23,7 +23,8 @@ func _ready():
 	SignalManager.GameOver.connect(GameOver)
 	SignalManager.PlayerHit.connect(UpdateHearts)
 	SignalManager.PickedUp.connect(UpdateHearts)
-
+	SignalManager.BossKilled.connect(BossKilled)
+	
 func _process(_delta):
 	scoreLabel.text = "00%s" %GameManager.score
 	
@@ -59,6 +60,14 @@ func LevelComplete():
 
 func GameOver():
 	SoundManager.PlaySound(sound,SoundManager.ENEMY_EXPLODE)
+	mainMenu = true
+	nextLevel = false
+	ColorScreen()
+	levelComplete.hide()
+	gameOver.show()
+
+func BossKilled(points):
+	GameManager.score += points
 	mainMenu = true
 	nextLevel = false
 	ColorScreen()

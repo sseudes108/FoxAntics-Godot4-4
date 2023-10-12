@@ -2,7 +2,7 @@ extends Node
 
 const GROUP_PLAYER: String = "Player"
 
-const TOTAL_LEVELS: int = 3
+const TOTAL_LEVELS: int = 2
 const MAIN_SCENE: PackedScene = preload("res://Project/MainScene/MainScene.tscn")
 
 var currentLevel: int = 0

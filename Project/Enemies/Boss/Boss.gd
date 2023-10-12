@@ -8,23 +8,17 @@ const TRIGGER: String = "parameters/conditions/OnTrigger"
 @onready var sound = $Sound
 
 @export var health: int = 1
-@export var points: int = 5
+@export var points: int = 15
 
 var player: Player
 
 var invencible: bool = false
 
-func _ready():
-	pass
-
-func _process(delta):
-	pass
-
 func Trigger(area):
 	if stateMachine[TRIGGER] == false:
 		stateMachine[TRIGGER] = true
 
-func Hit(area):
+func Hit(_area):
 	if stateMachine[TRIGGER] == true:
 		TakeHit()
 	else:
@@ -42,12 +36,11 @@ func Health():
 	health -= 1
 	SoundManager.PlaySound(sound, SoundManager.BOSS_HIT)
 	if health <= 0:
-		SignalManager.BossKilled.emit()
+		SignalManager.BossKilled.emit(points)
 		set_process(false)
 		queue_free()
 		SoundManager.PlaySound(sound, SoundManager.ENEMY_EXPLODE)
 		ObjectManager.EnemyExplosion(global_position)
-	print(health)
 
 func TakeHit():
 	if invencible == true:

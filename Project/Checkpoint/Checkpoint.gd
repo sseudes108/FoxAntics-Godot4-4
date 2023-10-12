@@ -10,11 +10,13 @@ func _ready():
 	sprite.hide()
 	SignalManager.BossKilled.connect(BossDead)
 
-func BossDead():
+func BossDead(points):
 	sprite.show()
 	if stateFlag[APPEAR] == false:
 		stateFlag[APPEAR] = true
+		SignalManager.BossKilled.emit(points)
 
-func CPTrigger(area):
+func CPTrigger(_area):
 	if stateFlag[APPEAR] == true:
 		SoundManager.PlaySound(sound, SoundManager.WIN)
+

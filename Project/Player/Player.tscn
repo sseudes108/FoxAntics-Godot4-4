@@ -183,6 +183,7 @@ libraries = {
 }
 
 [node name="DebugLabel" type="Label" parent="."]
+visible = false
 offset_left = -13.0
 offset_top = -41.0
 offset_right = 264.0
