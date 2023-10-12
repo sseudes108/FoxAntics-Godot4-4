@@ -1,3 +1,5 @@
+Marker2D
+Path2D
 Button
 HBoxContainer
 TextureButton
@@ -16,10 +18,8 @@ Timer
 ParallaxBackground
 ParallaxLayer
 Node
-Path2D
 AnimationPlayer
 PathFollow2D
-Marker2D
 AnimatableBody2D
 AnimationTree
 Node2D

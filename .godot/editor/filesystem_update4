@@ -11,3 +11,5 @@ res://Project/Player/Player.gd
 res://Project/PickUp/PickUp.gd
 res://Project/MainScene/MainScene.gd
 res://Project/HUD/HUD.gd
+res://Project/Bullet/PlayerBullet/PlayerBullet.tscn
+res://Project/Levels/Level2.tscn

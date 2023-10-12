@@ -43,7 +43,10 @@ func _process(_delta):
 			
 		if Input.is_action_just_pressed("jump"):
 			if nextLevel == true:
-				GameManager.LoadNextLevel()
+				if GameManager.currentLevel + 1 > GameManager.TOTAL_LEVELS:
+					GameManager.LoadMainScene()
+				else:
+					GameManager.LoadNextLevel()
 			if mainMenu == true:
 				GameManager.LoadMainScene()
 
